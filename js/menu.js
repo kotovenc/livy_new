@@ -15,3 +15,21 @@ $(window).scroll(function () {
     $('.header_bg').css('opacity', opacity);
     $('.logobg').css('opacity', opacity);
 });
+
+let every_second_click = 0;
+$('.menu-icon').click(function(){
+    $(".menu-hidden").fadeIn("slow");
+    if (every_second_click != 2) {
+        every_second_click = 1;
+    }
+});
+
+$(document).click(function(){
+    if (every_second_click == 2) {
+        $(".menu-hidden").fadeOut("slow");
+        every_second_click = 0;
+    }
+    if (every_second_click == 1) {
+        every_second_click++;
+    }
+});
