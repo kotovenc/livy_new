@@ -257,14 +257,7 @@ p{
    	grid-row-end: 2;	
 	width: 160px;
 }
-.gap > div {
-	background-color: aquamarine;
-	border: double 1px ;
-}
-.gap5 > p {
-	background-color: hotpink;
-	border: double 1px ;
-}
+
 #s_triangles{
 	position: absolute;
 	bottom: 0;
