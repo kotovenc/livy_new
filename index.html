@@ -9,6 +9,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 	<meta name="viewport" content="width=device-width">
 </head>
 
@@ -148,21 +153,54 @@
 			<img src="img/mail.png">
 			<p>8 (800) <b>555-35-35</b></p>
 		</div>
-		<div class="block grid form1">
-			<h1>Оставить заявку</h1>
+		
+	</div>
+	<div class="block grid form1">
+		<div class="form1_bg"></div>
+		<h1>Оставить заявку</h1>
+		<div class="form1_container">
 			<form class="form_grid submit">
-				<input type="name" name="name">
-				<input type="mail" name="mail">
+				<div class="name_input">
+					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+				</div>
+				<div class="email_input">
+					<input class="form_input" type="email" name="mail" placeholder="Ваша почта" autocomplete="off">
+					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+				</div>
 				<select name="type">
 					<option value="Landing page">Landing page</option>
 				</select>
-				<input type="text" name="text">
-				<input type="submit" name="submit">
+				<input type="text" name="text" placeholder="Текст" autocomplete="off">
+				<input type="submit" name="submit" class="order_button" value="ОСТАВИТЬ ЗАЯВКУ">
 			</form>
-			<div class="form1_bg"></div>
-			<div class="close_bar"></div>
+		</div>
+		<div class="close_bar" id="close1">
+			<div class="close_bar_toleft"></div>
 		</div>
 	</div>
+
+	<div class="block grid form2">
+		<div class="form2_bg"></div>
+		<h1>Заказать звонок</h1>
+		<div class="form2_container">
+			<form class="form_grid submit2">
+				<div class="name_input">
+					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+				</div>
+				<div class="email_input">
+					<input class="form_input" type="phone" name="phone" placeholder="Ваш номер" autocomplete="off">
+					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+				</div>
+				<input type="submit" name="submit" class="order_button" value="ЗАКАЗАТЬ ЗВОНОК">
+			</form>
+		</div>
+		<div class="close_bar" id="close2">
+			<div class="close_bar_toright"></div>
+		</div>
+	</div>
+
 	<div class="space_img">
 		<div class="black_grad">			
 		</div>
@@ -196,6 +234,7 @@
   </script>
   	<script src="js/menu.js"></script>
   	<script src="js/portfolio.js"></script>
+  	<script src="js/footer.js"></script>
 </body>
 
 </html>

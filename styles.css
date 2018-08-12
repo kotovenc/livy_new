@@ -29,6 +29,10 @@ p{
 	text-align: center;
 }
 
+button{
+	cursor: pointer;
+}
+
 .grid{
 	display: grid;
 	grid-template-rows: 1fr;
@@ -429,14 +433,32 @@ p{
 }
 
 .form1{
-	display: none;
+	z-index: 5;
+	//display: none;
 	text-align: center;
 	width: 100%;
-	position: absolute;
+	position: fixed;
+	bottom: 0;
+	left: -100%;
 	grid-template-rows: 100px 1fr 1fr 10fr 2fr 100px;
 }
 
 .form1_bg{
+	background-color: rgba(0,0,0,0.85);
+}
+
+.form2{
+	z-index: 5;
+	//display: none;
+	text-align: center;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	right: -100%;
+	grid-template-rows: 100px 1fr 1fr 10fr 2fr 100px;
+}
+
+.form2_bg{
 	background-color: rgba(0,0,0,0.85);
 }
 
@@ -445,17 +467,38 @@ p{
 	grid-template-columns: 1fr 30px 1fr;
 }
 
-.submit{
-	grid-template-rows: 50px 1fr 50px 1fr 20fr 1fr 50px;
+.form1_container{
+	//background-color: red;
 }
 
-.submit>input[type="name"]{
+.submit{
+	//background-color: red;
+	box-sizing: border-box;
+	height: 100%;
+	grid-template-rows: 30px 1fr 30px 1fr 20fr 1fr 30px;
+}
+
+.icon_class{
+	position: relative;
+	height: 30px;
+	margin-top: 0px;
+}
+
+.form_icon{
+	position: absolute;
+	font-size: 16px !important;
+	left: 2px;
+	top: -22px;
+	color:#aaa;
+}
+
+.name_input{
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 1;
 }
 
-.submit>input[type="mail"]{
+.email_input{
 	grid-column-start: 3;
 	grid-column-end: 4;
 	grid-row-start: 1;
@@ -467,19 +510,98 @@ p{
 	grid-row-start: 3;
 }
 
+.submit>select:focus{
+	box-shadow: 0 0 15px #f2cc30;
+}
+
 .submit>input[type="text"]{
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 5;
 }
 
+.submit>input[type="text"]:focus{
+	box-shadow: 0 0 15px #f2cc30;
+}
+
 .submit>input[type="submit"]{
+	justify-self: center;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 7;
 }
+
 .submit>input{
+	outline: none;
+	border: none;
+	display: block;
+	box-sizing: border-box;
 	width: 100%;
+}
+
+.submit2>input[type="submit"]{
+	justify-self: center;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+}
+
+.submit2>input{
+	outline: none;
+	border: none;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+
+.form_input{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	display: block;
+	box-sizing: border-box;
+	padding-left: 25px;
+}
+
+.form_input:focus + div>div{
+	color: #f2cc30;
+}
+
+.form_input:focus{
+	box-shadow: 0 0 15px #f2cc30;
+}
+
+.close_bar{
+	cursor: pointer;
+}
+
+.close_bar_toleft{
+	height: 100%;
+	float: left;
+	width: 10px;
+	background-color: #f2cc30;
+}
+
+.close_bar_toright{
+	height: 100%;
+	float: right;
+	width: 10px;
+	background-color: #f2cc30;
+}
+
+.form2{
+	grid-template-rows: 100px 1fr 1fr 70px 2fr 100px;
+}
+
+.submit2{
+	grid-template-rows: 30px 10px 30px;
+}
+
+.form1_container, .form2_container{
+	justify-self: center;
+	max-width: 600px;
 }
 
 @media(max-width: 575.9px){
@@ -490,16 +612,57 @@ p{
 	  	grid-row-start: 2;
 	}
 
+	.form2>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 2;
+	}
+
+	.form1_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 4;
+	}
+
+	.form2_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 4;
+	}
+
 	.submit>input{
 		
 	}
 
-	.submit{
-		max-width: 250px;
-		margin: 0 50px 0 50px;
-		grid-column-start: 2;
+	.form1_bg{
+		grid-column-start: 1;
 	  	grid-column-end: 5;
-	  	grid-row-start: 4;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+	.form2_bg{
+		grid-column-start: 2;
+	  	grid-column-end: 6;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close1{
+		margin-left: -10px;
+		grid-column-start: 5;
+	  	grid-column-end: 6;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close2{
+		margin-right: -10px;
+		grid-column-start: 1;
+	  	grid-column-end: 2;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
 	}
 
 	.more_portfolio{
@@ -701,6 +864,66 @@ p{
 }
 
 @media(min-width: 576px) and (max-width: 767.9px){
+
+	.form1>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form2>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form1_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.form2_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.submit>input{
+		
+	}
+
+	.form1_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 14;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+	.form2_bg{
+		grid-column-start: 2;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close1{
+		margin-left: -10px;
+		grid-column-start: 14;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close2{
+		margin-right: -10px;
+		grid-column-start: 1;
+	  	grid-column-end: 2;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -900,6 +1123,66 @@ p{
 }
 
 @media(min-width: 768px) and (max-width: 991.9px){
+
+	.form1>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form2>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form1_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.form2_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.submit>input{
+		
+	}
+
+	.form1_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 13;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+	.form2_bg{
+		grid-column-start: 3;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close1{
+		margin-left: -10px;
+		grid-column-start: 13;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close2{
+		margin-right: -10px;
+		grid-column-start: 1;
+	  	grid-column-end: 3;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1084,6 +1367,66 @@ p{
 }
 
 @media(min-width: 992px) and (max-width: 1199.9px){
+
+	.form1>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form2>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form1_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.form2_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.submit>input{
+		
+	}
+
+	.form1_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 13;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+	.form2_bg{
+		grid-column-start: 3;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close1{
+		margin-left: -10px;
+		grid-column-start: 13;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close2{
+		margin-right: -10px;
+		grid-column-start: 1;
+	  	grid-column-end: 3;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1267,6 +1610,65 @@ p{
 }
 
 @media(min-width: 1200px){
+	.form1>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form2>h1{
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 2;
+	}
+
+	.form1_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.form2_container{
+		margin: 0 20px;
+		grid-column-start: 2;
+	  	grid-column-end: 14;
+	  	grid-row-start: 4;
+	}
+
+	.submit>input{
+		
+	}
+
+	.form1_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 13;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+	.form2_bg{
+		grid-column-start: 3;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close1{
+		margin-left: -10px;
+		grid-column-start: 13;
+	  	grid-column-end: 15;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
+	#close2{
+		margin-right: -10px;
+		grid-column-start: 1;
+	  	grid-column-end: 3;
+	  	grid-row-start: 1;
+	  	grid-row-end: 7;
+	}
+
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1498,6 +1900,7 @@ a {
 	text-decoration: none;
 }
 .menu-icon:hover{
+	cursor: pointer;
 	color: white;
 }
 
