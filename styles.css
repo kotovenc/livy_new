@@ -213,13 +213,27 @@ p{
 	grid-template-rows: 170px 170px 167px ;
 	grid-gap: 10px;
 }
-.services_g{
-	width: 100%;
-	/*display: grid;
-	grid-template-columns:  10px repeat(5,1fr) 10px ;*/
-	grid-template-rows: 170px 170px 167px ;
-	grid-gap: 10px;
+.services_p_block{
+	position: absolute;
+	grid-column-start: 4;
+	grid-column-end: 12;
+	grid-row-start: 1;
+   	grid-row-end: 2;
+	margin-top: 75px;
+	
 }
+.services_p_lines{
+	display: grid;
+	grid-template-columns: repeat (4,1fr);
+	
+}
+.services_p_line{
+	grid-column-start: 1;
+	transform-origin:  0 0;
+	transform: rotate(90deg);
+	width: 100%;
+}
+
 
 .services1{
 	grid-column-start: 3;
@@ -547,7 +561,47 @@ p{
 	  	grid-column-end: 5;
 	  	grid-row-start: 4;
 	}
+	.services{
+		background-color: #272c46;
+		grid-template-rows: repeat(5, 170px) ;
+	}
+	
+.services1{
+	grid-column-start: 2;
+	grid-column-end: 3;
+   	grid-row-start: 1;
+   	grid-row-end: 2;	
+	width: 160px;
+}
 
+.services2{
+	grid-column-start: 4;
+	grid-column-end: 5;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
+.services3{
+	grid-column-start: 2;
+	grid-column-end: 3;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+.services4{
+	grid-column-start: 4;
+	grid-column-end: 5;
+   	grid-row-start: 4;
+   	grid-row-end: 5;	
+	width: 160px;
+}
+.services5{
+	grid-column-start: 2;
+	grid-column-end: 3;
+   	grid-row-start: 5;
+   	grid-row-end: 6;	
+	width: 160px;
+}
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 5;
@@ -747,6 +801,50 @@ p{
 }
 
 @media(min-width: 576px) and (max-width: 767.9px){
+	.grid{
+		grid-template-columns: 18px repeat(12, 1fr) 18px;
+	}
+	.services{
+		background-color: #272c46;
+		grid-template-rows: repeat(5, 160px) 50px;
+	}
+	
+.services1{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
+
+.services2{
+	grid-column-start: 9;
+	grid-column-end: 14;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+.services3{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 4;
+   	grid-row-end: 5;	
+	width: 160px;
+}
+.services4{
+	grid-column-start: 9;
+	grid-column-end: 14;
+   	grid-row-start: 5;
+   	grid-row-end: 6;	
+	width: 160px;
+}
+.services5{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 6;
+   	grid-row-end: 7;	
+	width: 160px;
+}
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -920,10 +1018,7 @@ p{
 	  	grid-row-end: 6;
 	}
 
-	.grid{
-		grid-template-columns: 18px repeat(12, 1fr) 18px;
-	}
-
+	
 	.large-grid{
 		position: fixed;
 		width: 100%;
@@ -946,6 +1041,51 @@ p{
 }
 
 @media(min-width: 768px) and (max-width: 991.9px){
+	
+	.grid{
+		grid-template-columns: 24px repeat(12, 1fr) 24px;
+	}
+
+	.services{
+		background-color: #272c46;
+		grid-template-rows: 50px repeat(5, 160px) 50px;
+	}
+.services1{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
+
+.services2{
+	grid-column-start: 9;
+	grid-column-end: 14;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+.services3{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 4;
+   	grid-row-end: 5;	
+	width: 160px;
+}
+.services4{
+	grid-column-start: 9;
+	grid-column-end: 14;
+   	grid-row-start: 5;
+   	grid-row-end: 6;	
+	width: 160px;
+}
+.services5{
+	grid-column-start: 2;
+	grid-column-end: 7;
+   	grid-row-start: 6;
+   	grid-row-end: 7;	
+	width: 160px;
+}
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1104,10 +1244,7 @@ p{
 	  	grid-row-start: 6;
 	}
 
-	.grid{
-		grid-template-columns: 24px repeat(12, 1fr) 24px;
-	}
-
+	
 	.large-grid{
 		position: fixed;
 		width: 100%;
@@ -1130,12 +1267,57 @@ p{
 }
 
 @media(min-width: 992px) and (max-width: 1199.9px){
+	.grid{
+		grid-template-columns: 15px repeat(12, 1fr) 15px;
+	}
+
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
 	  	grid-row-start: 8;
 	}
+.services{
+		background-color: #272c46;
+		grid-template-rows: repeat(5, 160px) 50px;
+	}
+	
+.services1{
+	grid-column-start: 3;
+	grid-column-end: 5;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+		justify-content: center;
+}
 
+	.services2{
+	grid-column-start: 5;
+	grid-column-end: 7;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+	.services3{
+	grid-column-start: 7;
+	grid-column-end: 9;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
+	.services4{
+	grid-column-start: 9;
+	grid-column-end: 11;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+	.services5{
+	grid-column-start: 11;
+	grid-column-end: 13;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
 	.portfolio_block{
 		font-size: 12px;
 	}
@@ -1287,10 +1469,7 @@ p{
 	  	grid-row-start: 5;
 	}
 
-	.grid{
-		grid-template-columns: 15px repeat(12, 1fr) 15px;
-	}
-
+	
 	.large-grid{
 		position: fixed;
 		width: 100%;
@@ -1313,6 +1492,52 @@ p{
 }
 
 @media(min-width: 1200px){
+	.grid{
+		grid-template-columns: 1fr repeat(12,95px) 1fr;
+	}
+	.services{
+		background-color: #272c46;
+		grid-template-rows: 50px repeat(3, 160px) 50px;
+	}
+	
+
+	.services1{
+	grid-column-start: 3;
+	grid-column-end: 5;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+		justify-content: center;
+}
+
+	.services2{
+	grid-column-start: 5;
+	grid-column-end: 7;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+	.services3{
+	grid-column-start: 7;
+	grid-column-end: 9;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
+	.services4{
+	grid-column-start: 9;
+	grid-column-end: 11;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	width: 160px;
+}
+	.services5{
+	grid-column-start: 11;
+	grid-column-end: 13;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	width: 160px;
+}
 	.more_portfolio{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1464,9 +1689,7 @@ p{
 	  	grid-row-start: 5;
 	}
 
-	.grid{
-		grid-template-columns: 1fr repeat(12,95px) 1fr;
-	}
+	
 
 	.large-grid{
 		position: fixed;
@@ -1596,4 +1819,7 @@ ul {
 	width: 150px;
 	display: block;
 	background-color: #272c46;
+}
+.points {
+	
 }
