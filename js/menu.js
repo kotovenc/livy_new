@@ -29,7 +29,7 @@ $('.menu-icon').click(function(){
         } else {
            localStorage.lastTime = nowTime;
         }
-    $(".menu-hidden").fadeIn("slow");
+     $(".menu-hidden").animate({left: '0'},500);
     if (every_second_click != 2) {
         every_second_click = 1;
     }
@@ -37,7 +37,7 @@ $('.menu-icon').click(function(){
 
 $(document).click(function(){
     if (every_second_click == 2) {
-        $(".menu-hidden").fadeOut("slow");
+        $(".menu-hidden").animate({left: '-100%'},500);
         every_second_click = 0;
     }
     if (every_second_click == 1) {
