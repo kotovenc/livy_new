@@ -2,10 +2,13 @@
 <html>
 <head>
 	<title>Веб-студия LivY</title>
+	<meta charset="utf-8">
+	<meta name="theme-color" content="#272c46">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="img/icon32.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width">
 </head>
 
@@ -17,7 +20,18 @@
 			<img class = "logobg" src="img/logobg.png">			
 		</div>
 		<div class="burger">
-			<img src="img/burger.png">
+			<div class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+			<div class="menu-hidden">
+				<ul><strong>
+					<li class="nav-itm1"><a href="#main">Главная</a></li>
+					<li class="nav-itm2"><a href="#about">О нас</a></li>
+					<li class="nav-itm3"><a href="#services">Услуги</a></li>
+					<li class="nav-itm4"><a href="#portfolio">Портфолио</a></li>
+					<li class="nav-itm5"><a href="#testimonials">Отзывы</a></li>
+					<li class="nav-itm6"><a href="#order">Заказать</a></li>
+					<li class="nav-itm7"><a href="#footer">Контакты</a></li>
+				</strong></ul>
+			</div>
 		</div>
 		<div class="menu">
 			<button class="nav_button" onclick="location.href='#main'"><div class="button_child">Главная</div></button>
@@ -43,18 +57,38 @@
 		</div>
 		<button class="item order_btn" onclick="location.href='#order'"><div class="button_child">ЗАКАЗАТЬ САЙТ</div></button>
 		<button class="item more" onclick="location.href='#about'"><div><p>Подробнее</p><img src="img/more.png"></div></button>
+		<div class="main_bg">
+			<div class="parallax-viewport" id="parallax">
+	        	        <!-- parallax layers -->
+		        <div class="parallax-layer">
+		            <div class="particles1"></div>
+		        </div>
+		        <div class="parallax-layer">
+		            <div class="particles2"></div>
+		        </div>
+		        <div class="parallax-layer">
+		         	<div class="particles3"></div>
+		        </div>
+	    	</div>
+
+		</div>
 	</div>
 	<a id="about"></a>
 	<div class="grid block about">
-		<!--
-		
-		<div class="cat_block">
+	<div class="item about_head"><h1>о нас</h1></div>
+	<div class="item about_text"><p>Мы - молодая команда веб-разработчиков. Мы поставили себе цель делать сайты качественно и  быстро, и с каждым днём мы стремимся достигнуть ее. У вас есть идея для сайта мечты? - скажите нам, и мы его сделаем. Мы всё реализуем так, чтобы вы остались довольны. Или же у вас есть сайт, но он требует доработок? Не беда, мы доведём ваш сайт до ума и, в случае каких-то пожеланий, исполним их по первому слову.</p></div>
+	<div class="item about_under">
+		<p>The fat cat sat on the mat bat away with paws eat and than sleep on your face so taco cat backwards spells taco cat but scream at teh bath litter kitter kitty litty little kitten big roar roar feed me, terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry.</p>
+	</div>
+	<div class="item about_slider"><h1>Слайдер коля плес</h1></div>
+	<div class="item about_cat"><img src="img/cat_no_bg.png"></div>
+	<div class="item about_catext"></div>
+		<!--div class="cat_block">
 			<img class="about_cat" src="img/cat_no_bg.png">
 			<div class="cat_bg">
 				<div></div>
 			</div>
-		</div>
-		-->
+		</div-->
 	</div>
 	<a id="services"></a>
 	<div class="grid block services">
@@ -62,6 +96,38 @@
 	</div>
 	<a id="portfolio"></a>
 	<div class="grid block portfolio">
+		<h1>ПОРТФОЛИО</h1>
+		<div class="item portfolio_block" id="p_block1">
+			<div class="overlay"></div>
+			<div class="portfolio_hidden">
+				<h2>Club 13</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+				<br>
+				<p>Sed tempor gravida ante eu pellentesque. Nullam consequat iaculis ipsum et tincidunt.</p>
+				<br>
+				<p>Nullam ornare finibus felis, rutrum consectetur nulla malesuada a.</p>
+				<a class="portf_site_link" href="#">Перейти на сайт</a>
+				<br>
+				<a class="portf_case_link" href="#">Посмотреть кейс</a>
+			</div>
+		</div>
+		<div class="item portfolio_block" id="p_block2">
+			<div class="overlay"></div>
+			<div class="portfolio_hidden">
+				<h2>Club 13</h2>
+				<br>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+				<br>
+				<p>Sed tempor gravida ante eu pellentesque. Nullam consequat iaculis ipsum et tincidunt.</p>
+				<br>
+				<p>Nullam ornare finibus felis, rutrum consectetur nulla malesuada a.</p>
+				<a class="portf_site_link" href="#">Перейти на сайт</a>
+				<br>
+				<a class="portf_case_link" href="#">Посмотреть кейс</a>
+			</div>
+		</div>
+		<a class="more_portfolio" href="#">Посмотреть все работы</a>
 		<div id="p_triangles"></div>
 	</div>
 	<a id="testimonials"></a>
@@ -75,15 +141,26 @@
 		<button class="item order_button" id="order2" onclick="location.href='#order'"><div class="button_child">ЗАКАЗАТЬ ЗВОНОК</div></button>
 		
 		<div class="item copyright"><p>2018 © Все права защищены. Любое копирование только с разрешения и указания источника. www.livy.website</p></div>
-			<div class="item footer_contact">
-				<p>Свяжитесь с нами:</p>
-				<img src="img/tg.png">
-				<img src="img/tg.png">
-				<img src="img/tg.png">
-				8 (800) <b>555-35-35</b>
-			</div>
-		<div class="item footer">
-			
+		<div class="item footer_contact">
+			<p>Свяжитесь с нами:</p>
+			<img src="img/tg.png">
+			<img src="img/vk.png">
+			<img src="img/mail.png">
+			<p>8 (800) <b>555-35-35</b></p>
+		</div>
+		<div class="block grid form1">
+			<h1>Оставить заявку</h1>
+			<form class="form_grid submit">
+				<input type="name" name="name">
+				<input type="mail" name="mail">
+				<select name="type">
+					<option value="Landing page">Landing page</option>
+				</select>
+				<input type="text" name="text">
+				<input type="submit" name="submit">
+			</form>
+			<div class="form1_bg"></div>
+			<div class="close_bar"></div>
 		</div>
 	</div>
 	<div class="space_img">
@@ -108,6 +185,17 @@
 		<div class="column"></div>
 		<div class="column"></div>
 	</div-->
+	 <script src="js/jquery.parallax.js"></script>
+	  <script>
+  jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('#parallax')
+    });
+  });
+  </script>
+  	<script src="js/menu.js"></script>
+  	<script src="js/portfolio.js"></script>
 </body>
-<script src="js/menu.js"></script>
+
 </html>
