@@ -327,9 +327,9 @@ p{
 }
 
 .slider{
-	margin-top:5vw;
+	margin-top:10vh;
 	width: 100%;
-	height: 18vw;
+	height: 25vh;
 
 	position: relative;
 }
@@ -364,6 +364,8 @@ p{
 
 #i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
 	width: 15.5vw;/*любой размер*/
+	max-width: 170px;
+	min-width: 160px;
 }
 
 .in1slide{
@@ -638,6 +640,47 @@ p{
 		  	grid-row-start: 4;
 		  	grid-row-end: 7;
 		}
+	}
+
+	.about_slider{
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 4;
+	}
+	
+	.slider{
+		height: 13vh;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		min-width: 90px;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		font-size: 12px;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p:last-child{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		font-size: 10px;
+	}
+
+	.sliderLeft{
+		top: 35%;
+		transform: translate(-35%, -50%);
+	}
+
+	.sliderRight{
+		top: 35%;
+		transform: translate(90%, -50%);
+		right:0;
+	}
+
+	.sliderLeft>img{
+		width: 50%;
+	}
+
+	.sliderRight>img{
+		width: 50%;
 	}
 
 	.order_button{
@@ -1024,6 +1067,10 @@ p{
 		  	grid-row-start: 4;
 		  	grid-row-end: 7;
 		}
+	}
+
+	.slider{
+		margin-top:20vh;
 	}
 
 	.copyright{

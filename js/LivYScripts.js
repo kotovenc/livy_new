@@ -7,7 +7,10 @@ var startMouseX = 0;
 var idMoveMouse = 0;
 var numberOfActSlide = 0;
 var relX = 0;
+var flagSwitch = [];
 
+
+/*\/ \/ \/ \/ \/ \/ \/ \/ \/Костыли - переделать\/ \/ \/ \/ \/ \/ \/ \/*/
 function loadSlider(){
 	for(var j=0; j <= $('.slider').last().index(); j++){
 		var idEl = $('.slider').eq(j).attr('id');
@@ -15,6 +18,7 @@ function loadSlider(){
 		var numAllSlide =  thisSlider.children('.slider_block').last().index();/*сколько всего слайдов (настоящих)*/
 
 		numClone[idEl] = thisSlider.attr('numActSlide');
+		flagSwitch[idEl] = 0;
 
 		/*настройка размеров*/
 		$('.slider'+'#'+idEl).children('.containerSlider').css("width", numClone[idEl]*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');
@@ -50,8 +54,91 @@ function loadSlider(){
 	}
 }
 
+function reloadSlider(idEl){
+	var thisSlider =  $('.slider'+'#'+idEl).children('.containerSlider').children('.containerBlock');
+	thisSlider.children('.clone').remove();
+	var numAllSlide =  thisSlider.children('.slider_block').last().index();/*сколько всего слайдов (настоящих)*/
+
+	numClone[idEl] = thisSlider.attr('numActSlide');
+
+		/*настройка размеров*/
+	$('.slider'+'#'+idEl).children('.containerSlider').css("width", numClone[idEl]*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');
+	thisSlider.css("width", (2*numClone[idEl]+numAllSlide + 1)*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');/*размеры*/
+		/*настройка размеров*/
+
+	var numEndClone = numClone[idEl];/*сколько надо клонов*/
+	var i = 0;
+
+	while(numEndClone > 0){
+		numEndClone = numEndClone - 1;
+
+		thisSlider.children('.slider_block').eq(2*i).clone().removeClass('active').addClass('clone').appendTo(thisSlider);/*клон снизу*/
+		thisSlider.children('.slider_block').eq(numAllSlide).clone().removeClass('active').addClass('clone').prependTo(thisSlider);/*клон сверху*/
+
+		i++;
+	}
+
+		/*настройка размеров*/
+	thisSlider.css("transform","translate3d("+ -(thisSlider.children('.active').index())*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() +"px, 0, 0)");
+		/*настройка размеров*/
+	if(thisSlider.attr('haveSpecialCenterSlide') != 0){
+		thisSlider.children('.slider_block').removeClass(idEl + 'specialEl');
+	}
+
+	if(thisSlider.attr('haveSpecialCenterSlide') != 0){
+		numSpecialCenterSlide[idEl] = thisSlider.attr('haveSpecialCenterSlide');
+		thisSlider.children('.slider_block').css({transition:"opacity 0.5s ease"});
+		thisSlider.children('.slider_block').css({opacity:"0.5"});
+		for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
+			thisSlider.children('.slider_block').eq(thisSlider.children('.active').index()+parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl');
+		}
+	}else{
+		numSpecialCenterSlide[idEl] = 0;
+	}
+}
+
+function switchSlider(idEl){
+	var thisSlider =  $('.slider'+'#'+idEl).children('.containerSlider').children('.containerBlock');
+	thisSlider.children('.clone').remove();
+	var numAllSlide =  thisSlider.children('.slider_block').last().index();/*сколько всего слайдов (настоящих)*/
+
+	numClone[idEl] = thisSlider.attr('switchNumActSlide');
+
+		/*настройка размеров*/
+	$('.slider'+'#'+idEl).children('.containerSlider').css("width", numClone[idEl]*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');
+	thisSlider.css("width", (2*numClone[idEl]+numAllSlide + 1)*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');/*размеры*/
+		/*настройка размеров*/
+
+	var numEndClone = numClone[idEl];/*сколько надо клонов*/
+	var i = 0;
+
+	while(numEndClone > 0){
+		numEndClone = numEndClone - 1;
+
+		thisSlider.children('.slider_block').eq(2*i).clone().removeClass('active').addClass('clone').appendTo(thisSlider);/*клон снизу*/
+		thisSlider.children('.slider_block').eq(numAllSlide).clone().removeClass('active').addClass('clone').prependTo(thisSlider);/*клон сверху*/
+
+		i++;
+	}
+
+		/*настройка размеров*/
+	thisSlider.css("transform","translate3d("+ -(thisSlider.children('.active').index())*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() +"px, 0, 0)");
+		/*настройка размеров*/
+
+	if(thisSlider.attr('haveSpecialCenterSlide') != 0){
+		numSpecialCenterSlide[idEl] = thisSlider.attr('haveSpecialCenterSlide');
+		thisSlider.children('.slider_block').css({transition:"opacity 0.5s ease"});
+		thisSlider.children('.slider_block').css({opacity:"0.5"});
+		for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
+			thisSlider.children('.slider_block').eq(thisSlider.children('.active').index()+parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl');
+		}
+	}else{
+		numSpecialCenterSlide[idEl] = 0;
+	}
+}
+
 $(window).resize(function(){
-  	for(var j=0; j < $('.slider').last().index(); j++){
+  	for(var j=0; j <= $('.slider').last().index(); j++){
 		var idEl = $('.slider').eq(j).attr('id');
 		var thisSlider =  $('.slider'+'#'+idEl).children('.containerSlider').children('.containerBlock');
 		var numAllSlide =  thisSlider.children('.slider_block').last().index() - 2*numClone[idEl];/*сколько всего слайдов (настоящих)*/
@@ -59,11 +146,27 @@ $(window).resize(function(){
 		thisSlider.css({transition:"all 0s linear 0s"});
 
 		/*настройка размеров*/
+		if($( window ).width() > parseInt(thisSlider.attr('switchWinSize'))){
+			if(flagSwitch[idEl] == 1){
+				reloadSlider(idEl);
+			}
+
+			flagSwitch[idEl] = 0;
+		}else{
+			if(flagSwitch[idEl] == 0){
+				switchSlider(idEl);
+			}
+
+			flagSwitch[idEl] = 1;
+		}
+
 		$('.slider'+'#'+idEl).children('.containerSlider').css("width", numClone[idEl]*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');
 		thisSlider.css("width", (2*numClone[idEl]+numAllSlide + 1)*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() + 'px');/*размеры*/
 		thisSlider.css("transform","translate3d("+ -(thisSlider.children('.active').index())*$('#' + idEl + '>.containerSlider>.containerBlock>.slider_block').width() +"px, 0, 0)");
 	}
 });
+
+/*/\ /\ /\ /\ /\ /\ /\ /\ /\Костыли - переделать/\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\ /\*/
 
 $(document).ready(function(){
 	loadSlider();
@@ -189,7 +292,7 @@ $(document).ready(function(){
 			 			for(var i=0; i<numSpecialCenterSlide[idMoveMouse]; i++){
 							thisSlider.children('.slider_block').eq(thisSlider.children('.slider_block').last().index()-(numClone[idMoveMouse]-Math.ceil(numClone[idMoveMouse]/2)) + parseInt(numSpecialCenterSlide[idMoveMouse]/2)-i).addClass(idMoveMouse + 'specialEl').css({transition:"opacity 0s ease"});
 						}
-						
+
 						setTimeout(function (){ addSpecialCenterSlide(idMoveMouse);}, 50);
 					}else{
 						addSpecialCenterSlide(idMoveMouse);/*выделение центрального слайда*/
