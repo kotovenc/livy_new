@@ -319,12 +319,94 @@ p{
 .footer_contact{
 
 }
-
+/*------------------------------SLider-------------------*/
 .about_slider{
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end: 14;
 	grid-row-start: 4;
 }
+
+.slider{
+	margin-top:5vw;
+	width: 100%;
+	height: 18vw;
+
+	position: relative;
+}
+
+.containerSlider{
+	width: 500px;/*равно размеру слайда*на кол-во отображенных слайдов (само ставится)*/
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+	position: relative;
+
+	//background: black;
+}
+
+.containerBlock{
+	height: 100%;
+	width: 9000px;/*равно (кол-во слайдов + кол-во клонов)*на их ширину (само ставится)*/
+}
+
+.slider_block{
+	height: 100%;/*общие параметры для каждого слайда*/
+	float:left;
+
+	pointer-events: none;
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+}
+
+#i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	width: 15.5vw;/*любой размер*/
+}
+
+.in1slide{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.in1slide>.pic{
+	width: 100%;
+	margin-bottom: -8px;
+}
+
+.in1slide>p{
+	font-size: 25px;
+}
+
+.in1slide>p:last-child{
+	margin-top: -5px;
+	font-size: 18px;
+}
+
+
+.i1specialEl{
+	opacity: 1 !important;
+}
+
+.sliderLeft{
+	position:absolute;
+
+	top: 35%;
+	transform: translate(-70%, -50%);
+}
+
+.sliderRight{
+	position:absolute;
+
+	top: 35%;
+	transform: translate(70%, -50%);
+	right:0;
+}
+
+/*------------------------------SLider-------------------*/
 
 #order1{
 	justify-self: right;
