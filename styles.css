@@ -210,7 +210,7 @@ p{
 
 .services{
 	background-color: #272c46;
-	grid-template-rows: 170px 170px 167px ;
+	text-align: center;
 }
 .services_p_block{
 	position: absolute;
@@ -547,7 +547,9 @@ p{
 }
 
 @media(max-width: 575.9px){
-
+.grid{
+		grid-template-columns: 15px 1fr 30px 1fr 15px;
+	}
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 5;
@@ -567,44 +569,45 @@ p{
 	}
 	.services{
 		background-color: #272c46;
-		grid-template-rows: repeat(5, 170px) ;
+		grid-template-rows: 50px repeat(5, 170px) ;
 		margin-bottom: auto;
+		min-height: 1200px;
 	}
 	
 .services1{
 	grid-column-start: 2;
 	grid-column-end: 3;
-   	grid-row-start: 1;
-   	grid-row-end: 2;	
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
 	justify-self: center;
 }
 
 .services2{
 	grid-column-start: 4;
 	grid-column-end: 5;
-   	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
 	justify-self: center;
 }
 .services3{
 	grid-column-start: 2;
 	grid-column-end: 3;
-   	grid-row-start: 3;
-   	grid-row-end: 4;	
+   	grid-row-start: 4;
+   	grid-row-end: 5;	
 	justify-self: center;
 }
 .services4{
 	grid-column-start: 4;
 	grid-column-end: 5;
-   	grid-row-start: 4;
-   	grid-row-end: 5;	
+   	grid-row-start: 5;
+   	grid-row-end: 6;	
 	justify-self: center;
 }
 .services5{
 	grid-column-start: 2;
 	grid-column-end: 3;
-   	grid-row-start: 5;
-   	grid-row-end: 6;	
+   	grid-row-start: 6;
+   	grid-row-end: 7;	
 	justify-self: center;
 }
 	.more_portfolio{
@@ -772,9 +775,6 @@ p{
 	  	font-size: 12px;
 	}
 
-	.grid{
-		grid-template-columns: 15px 1fr 30px 1fr 15px;
-	}
 
 	.large-grid{
 		position: fixed;
@@ -812,6 +812,7 @@ p{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: repeat(5, 160px) 50px;
+		min-height: 1200px;
 	}
 	
 .services1{
@@ -1055,6 +1056,7 @@ p{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 50px repeat(5, 160px) 50px;
+		min-height: 1000px;
 	}
 .services1{
 	grid-column-start: 2;
@@ -1282,11 +1284,17 @@ p{
 	  	grid-column-end: 14;
 	  	grid-row-start: 8;
 	}
-.services{
+
+	.services{
 		background-color: #272c46;
-		grid-template-rows: repeat(5, 160px) 50px;
+		grid-template-rows: 50px 160px 0px 210px  1fr;	
 	}
-	
+	@media (max-height: 620px)
+	{
+		.services{
+		grid-template-rows: 50px calc(100vh - 470px) 0px 210px  1fr;	
+		}
+	}
 .services1{
 	grid-column-start: 3;
 	grid-column-end: 5;
@@ -1499,24 +1507,19 @@ p{
 
 @media(min-width: 1200px){
 	.grid{
-		grid-template-columns: 10px repeat(12,95px) 1fr;
+		grid-template-columns: 1fr repeat(12,95px) 1fr;
 	}
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 50px repeat (3,160px) 1fr;
+		grid-template-rows: 50px 160px 0px 210px  1fr;	
 	}
 	@media (max-height: 620px)
 	{
 		.services{
 		grid-template-rows: 50px calc(100vh - 470px) 0px 210px  1fr;	
-			background: #BFFF5F;
 		}
 	}
-	/*.services{
-		background-color: #272c46;
-		grid-template-rows: 50px 0px minmax(0px,160px) 160px; 1fr;
-	}*/
-
+	
 	.services1{
 	grid-column-start: 3;
 	grid-column-end: 5;
@@ -1842,6 +1845,4 @@ ul {
 	display: block;
 	background-color: #272c46;
 }
-.points {
-	
-}
+
