@@ -156,7 +156,7 @@ p{
 
 .about{
 	background: radial-gradient(ellipse, #272c46, black);
-	grid-template-rows: 5% 5% 20% 20% 25% 20% 5%;
+	grid-template-rows: 10% 5% 20% 15% 25% 20% 5%;
 	font-size: 15px;
 }
 
