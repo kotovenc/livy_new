@@ -211,7 +211,6 @@ p{
 .services{
 	background-color: #272c46;
 	grid-template-rows: 170px 170px 167px ;
-	grid-gap: 10px;
 }
 .services_p_block{
 	position: absolute;
@@ -240,7 +239,8 @@ p{
 	grid-column-end: 5;
    	grid-row-start: 1;
    	grid-row-end: 2;	
-	width: 160px;
+	justify-self: center;
+	text-align: center;
 }
 
 .services2{
@@ -248,28 +248,32 @@ p{
 	grid-column-end: 7;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
+	text-align: center;
 }
 .services3{
 	grid-column-start: 7;
 	grid-column-end: 9;
    	grid-row-start: 1;
    	grid-row-end: 2;	
-	width: 160px;
+	justify-self: center;
+	text-align: center;
 }
 .services4{
 	grid-column-start: 9;
 	grid-column-end: 11;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
+	text-align: center;
 }
 .services5{
 	grid-column-start: 11;
 	grid-column-end: 13;
    	grid-row-start: 1;
    	grid-row-end: 2;	
-	width: 160px;
+	justify-self: center;
+	text-align: center;
 }
 
 #s_triangles{
@@ -564,6 +568,7 @@ p{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: repeat(5, 170px) ;
+		margin-bottom: auto;
 	}
 	
 .services1{
@@ -571,7 +576,7 @@ p{
 	grid-column-end: 3;
    	grid-row-start: 1;
    	grid-row-end: 2;	
-	width: 160px;
+	justify-self: center;
 }
 
 .services2{
@@ -579,28 +584,28 @@ p{
 	grid-column-end: 5;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
 }
 .services3{
 	grid-column-start: 2;
 	grid-column-end: 3;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self: center;
 }
 .services4{
 	grid-column-start: 4;
 	grid-column-end: 5;
    	grid-row-start: 4;
    	grid-row-end: 5;	
-	width: 160px;
+	justify-self: center;
 }
 .services5{
 	grid-column-start: 2;
 	grid-column-end: 3;
    	grid-row-start: 5;
    	grid-row-end: 6;	
-	width: 160px;
+	justify-self: center;
 }
 	.more_portfolio{
 		grid-column-start: 2;
@@ -814,7 +819,8 @@ p{
 	grid-column-end: 7;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
+	
 }
 
 .services2{
@@ -822,28 +828,28 @@ p{
 	grid-column-end: 14;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self: center;
 }
 .services3{
 	grid-column-start: 2;
 	grid-column-end: 7;
    	grid-row-start: 4;
    	grid-row-end: 5;	
-	width: 160px;
+	justify-self: center;
 }
 .services4{
 	grid-column-start: 9;
 	grid-column-end: 14;
    	grid-row-start: 5;
    	grid-row-end: 6;	
-	width: 160px;
+	justify-self: center;
 }
 .services5{
 	grid-column-start: 2;
 	grid-column-end: 7;
    	grid-row-start: 6;
    	grid-row-end: 7;	
-	width: 160px;
+	justify-self: center;
 }
 	.more_portfolio{
 		grid-column-start: 2;
@@ -1055,7 +1061,7 @@ p{
 	grid-column-end: 7;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
 }
 
 .services2{
@@ -1063,28 +1069,28 @@ p{
 	grid-column-end: 14;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self: center;
 }
 .services3{
 	grid-column-start: 2;
 	grid-column-end: 7;
    	grid-row-start: 4;
    	grid-row-end: 5;	
-	width: 160px;
+	justify-self: center;
 }
 .services4{
 	grid-column-start: 9;
 	grid-column-end: 14;
    	grid-row-start: 5;
    	grid-row-end: 6;	
-	width: 160px;
+	justify-self: center;
 }
 .services5{
 	grid-column-start: 2;
 	grid-column-end: 7;
    	grid-row-start: 6;
    	grid-row-end: 7;	
-	width: 160px;
+	justify-self: center;
 }
 	.more_portfolio{
 		grid-column-start: 2;
@@ -1286,8 +1292,8 @@ p{
 	grid-column-end: 5;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
-		justify-content: center;
+	
+	justify-self:center;
 }
 
 	.services2{
@@ -1295,28 +1301,28 @@ p{
 	grid-column-end: 7;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self:center;
 }
 	.services3{
 	grid-column-start: 7;
 	grid-column-end: 9;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self:center;
 }
 	.services4{
 	grid-column-start: 9;
 	grid-column-end: 11;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self:center;
 }
 	.services5{
 	grid-column-start: 11;
 	grid-column-end: 13;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self:center;
 }
 	.portfolio_block{
 		font-size: 12px;
@@ -1493,21 +1499,32 @@ p{
 
 @media(min-width: 1200px){
 	.grid{
-		grid-template-columns: 1fr repeat(12,95px) 1fr;
+		grid-template-columns: 10px repeat(12,95px) 1fr;
 	}
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 50px repeat(3, 160px) 50px;
+		grid-template-rows: 50px repeat (3,160px) 1fr;
 	}
-	
+	@media (max-height: 620px)
+	{
+		.services{
+		grid-template-rows: 50px calc(100vh - 470px) 0px 210px  1fr;	
+			background: #BFFF5F;
+		}
+	}
+	/*.services{
+		background-color: #272c46;
+		grid-template-rows: 50px 0px minmax(0px,160px) 160px; 1fr;
+	}*/
 
 	.services1{
 	grid-column-start: 3;
 	grid-column-end: 5;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
-		justify-content: center;
+	justify-self: center;
+		
+		width: 160px;
 }
 
 	.services2{
@@ -1515,28 +1532,33 @@ p{
 	grid-column-end: 7;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self: center;
+		width: 160px;
+		
 }
 	.services3{
 	grid-column-start: 7;
 	grid-column-end: 9;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
+		width: 160px;
 }
 	.services4{
 	grid-column-start: 9;
 	grid-column-end: 11;
    	grid-row-start: 3;
    	grid-row-end: 4;	
-	width: 160px;
+	justify-self: center;
+		width: 160px;
 }
 	.services5{
 	grid-column-start: 11;
 	grid-column-end: 13;
    	grid-row-start: 2;
    	grid-row-end: 3;	
-	width: 160px;
+	justify-self: center;
+		width: 160px;
 }
 	.more_portfolio{
 		grid-column-start: 2;
