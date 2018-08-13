@@ -569,10 +569,14 @@ p{
 	}
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 50px repeat(5, 170px) ;
-		margin-bottom: auto;
-		min-height: 1200px;
+		grid-template-rows: 60px repeat(5, 170px);
+		min-height: 1050px;
+        font-size: 12px;
 	}
+    .services img {
+        height: 140px;
+        width: 140px;
+    }
 	
 .services1{
 	grid-column-start: 2;
@@ -774,7 +778,21 @@ p{
 	  	grid-row-start: 3;
 	  	font-size: 12px;
 	}
-
+    
+    .services_head {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+    }
+	.services{
+        padding-top: 100px;
+		background-color: #272c46;
+		grid-template-rows: 50px repeat(5, 160px) 50px;
+		min-height: 1200px;
+	}
+    
 
 	.large-grid{
 		position: fixed;
@@ -809,10 +827,18 @@ p{
 	.grid{
 		grid-template-columns: 18px repeat(12, 1fr) 18px;
 	}
+    .services_head {
+        grid-column-start: 1;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+    }
 	.services{
+        padding-top: 100px;
 		background-color: #272c46;
-		grid-template-rows: repeat(5, 160px) 50px;
-		min-height: 1200px;
+		grid-template-rows: 50px repeat(5, 160px) 50px;
+		min-height: 1100px;
 	}
 	
 .services1{
@@ -1052,12 +1078,20 @@ p{
 	.grid{
 		grid-template-columns: 24px repeat(12, 1fr) 24px;
 	}
-
+    .services_head {
+        grid-column-start: 1;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+    }
 	.services{
+        padding-top: 100px;
 		background-color: #272c46;
 		grid-template-rows: 50px repeat(5, 160px) 50px;
 		min-height: 1000px;
 	}
+	
 .services1{
 	grid-column-start: 2;
 	grid-column-end: 7;
@@ -1284,11 +1318,22 @@ p{
 	  	grid-column-end: 14;
 	  	grid-row-start: 8;
 	}
-
+    
 	.services{
+        padding-top: 100px;
 		background-color: #272c46;
 		grid-template-rows: 50px 160px 0px 210px  1fr;	
+		min-height: 1000px;
 	}
+    
+    .services_head {
+        grid-column-start: 1;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+    }
+
 	@media (max-height: 620px)
 	{
 		.services{
@@ -1509,14 +1554,27 @@ p{
 	.grid{
 		grid-template-columns: 1fr repeat(12,95px) 1fr;
 	}
-	.services{
+    
+    .services{
+        padding-top: 100px;
 		background-color: #272c46;
-		grid-template-rows: 50px 160px 0px 210px  1fr;	
+		grid-template-rows: 80px 160px 0px 210px  1fr;	
+		min-height: 500px;
 	}
+    
+    .services_head {
+        grid-column-start: 2;
+        grid-column-end: 14;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+        align-self: center;
+    }
+    
 	@media (max-height: 620px)
 	{
 		.services{
-		grid-template-rows: 50px calc(100vh - 470px) 0px 210px  1fr;	
+		grid-template-rows: 80px calc(100vh - 470px) 0px 210px  1fr;	
 		}
 	}
 	
