@@ -234,47 +234,6 @@ p{
 }
 
 
-.services1{
-	grid-column-start: 3;
-	grid-column-end: 5;
-   	grid-row-start: 1;
-   	grid-row-end: 2;	
-	justify-self: center;
-	text-align: center;
-}
-
-.services2{
-	grid-column-start: 5;
-	grid-column-end: 7;
-   	grid-row-start: 2;
-   	grid-row-end: 3;	
-	justify-self: center;
-	text-align: center;
-}
-.services3{
-	grid-column-start: 7;
-	grid-column-end: 9;
-   	grid-row-start: 1;
-   	grid-row-end: 2;	
-	justify-self: center;
-	text-align: center;
-}
-.services4{
-	grid-column-start: 9;
-	grid-column-end: 11;
-   	grid-row-start: 2;
-   	grid-row-end: 3;	
-	justify-self: center;
-	text-align: center;
-}
-.services5{
-	grid-column-start: 11;
-	grid-column-end: 13;
-   	grid-row-start: 1;
-   	grid-row-end: 2;	
-	justify-self: center;
-	text-align: center;
-}
 
 #s_triangles{
 	position: absolute;
@@ -569,8 +528,8 @@ p{
 	}
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 60px repeat(5, 170px);
-		min-height: 1050px;
+		grid-template-rows: 1fr repeat(5, 170px) 1fr;
+		min-height: 1000px;
         font-size: 12px;
 	}
     .services img {
@@ -786,12 +745,7 @@ p{
         grid-row-end: 2;
         justify-self: center;
     }
-	.services{
-        padding-top: 100px;
-		background-color: #272c46;
-		grid-template-rows: 50px repeat(5, 160px) 50px;
-		min-height: 1200px;
-	}
+
     
 
 	.large-grid{
@@ -1320,10 +1274,10 @@ p{
 	}
     
 	.services{
-        padding-top: 100px;
+       
 		background-color: #272c46;
-		grid-template-rows: 50px 160px 0px 210px  1fr;	
-		min-height: 1000px;
+		grid-template-rows: 1fr 160px 0px 210px  1fr;	
+		min-height: 500px;
 	}
     
     .services_head {
@@ -1556,9 +1510,9 @@ p{
 	}
     
     .services{
-        padding-top: 100px;
+    /*    padding-top: 100px;*/
 		background-color: #272c46;
-		grid-template-rows: 80px 160px 0px 210px  1fr;	
+		grid-template-rows: 1fr 160px 0px 210px  1fr;	
 		min-height: 500px;
 	}
     
