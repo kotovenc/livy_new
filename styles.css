@@ -241,6 +241,7 @@ p{
 }
 
 .testimonials{
+	grid-template-rows: 100px 50px 10fr 50px;
 	background-color: #272c46;
 }
 
@@ -403,16 +404,102 @@ p{
 .sliderLeft{
 	position:absolute;
 
-	top: 35%;
+	top: 33%;
 	transform: translate(-70%, -50%);
 }
 
 .sliderRight{
 	position:absolute;
 
-	top: 35%;
+	top: 33%;
 	transform: translate(70%, -50%);
 	right:0;
+}
+
+/*------------------------------SLider-------------------*/
+.testimonialsBlock.slider{
+	width: 130%;
+	height: 100%;
+	margin-top:60px;
+
+	margin-left: -15%;
+
+	overflow: hidden;
+
+	position: relative;
+}
+
+.testimonials_h{
+	grid-column-start: 2;
+	grid-column-end: 14;
+	grid-row-start: 2;
+	grid-row-end: 2;
+	font-size: 50px;
+	text-align: center;
+}
+
+.TSLider{
+	grid-column-start: 1;
+	grid-column-end: 15;
+	grid-row-start: 3;
+	grid-row-end: 3;
+
+	overflow: hidden;
+}
+
+#i2>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	width: 36vw;/*любой размер*/
+	max-width: 430px;
+	min-width: 360px;
+}
+
+.in2slide{
+	width: 80%;
+	height: 467px;
+	margin-left: auto;
+	margin-right: auto;
+
+	//border: 2px solid black;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+
+	position: relative;
+}
+
+.in2slide>p:first-child{
+	padding-top: 1.5vw;
+	font-weight: 900;
+}
+
+.in2slide>p{
+	margin-top: 1.5vw;
+	margin-left:  1.4vw;
+	margin-right: 1.4vw;
+	text-align: center;
+}
+
+.in2slide>p:last-child{
+	margin-top: 0;
+	font-size: 15px;
+}
+
+.i2specialEl{
+	opacity: 1 !important;
+}
+
+#i2>.sliderLeft{
+	position:absolute;
+
+	top: 37%;
+	left:37%;
+	transform: translate(-70%, -50%);
+}
+
+#i2>.sliderRight{
+	position:absolute;
+
+	top: 37%;
+	right:37%;
+	transform: translate(70%, -50%);
 }
 
 /*------------------------------SLider-------------------*/
@@ -659,37 +746,76 @@ p{
 		height: 13vh;
 	}
 
-	#i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	#i1>.containerSlider>.containerBlock>.slider_block{
 		min-width: 90px;
 	}
 
-	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p{
 		font-size: 12px;
 	}
 
-	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p:last-child{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p:last-child{
 		font-size: 10px;
 	}
 
 	.sliderLeft{
-		top: 35%;
+		top: 33%;
 		transform: translate(-35%, -50%);
 	}
 
 	.sliderRight{
-		top: 35%;
+		top: 33%;
 		transform: translate(90%, -50%);
 		right:0;
 	}
 
-	.sliderLeft>img{
+	#i1>.sliderLeft>img{
 		width: 50%;
 	}
 
-	.sliderRight>img{
+	#i1>.sliderRight>img{
 		width: 50%;
 	}
 
+	.testimonialsBlock.slider{
+		margin-top:8vh;
+		margin-left: 0;
+		width: 992px;
+		left:50%;
+		transform: translate(-50%, 0);
+	}
+
+	#i2>.sliderLeft{
+		left:37%;
+		transform: translate(-70%, -50%);
+	}
+
+	#i2>.sliderRight{
+		right:37%;
+		transform: translate(70%, -50%);
+	}
+	
+	#i2>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		width: 300px;
+		min-width: 300px;
+	}
+
+	.in2slide>p:first-child{
+		padding-top: 10px;
+		margin-bottom: 8px;
+	}
+
+	.in2slide>p{
+		margin-top: 8px;
+		margin-left:  8px;
+		margin-right: 8px;
+		font-size: 14.5px;
+	}
+
+	.in2slide>p:last-child{
+		font-size: 13px;
+	}
+	
 	.order_button{
 		font-size: 11px;
 	}
@@ -896,6 +1022,35 @@ p{
 		}
 	}
 
+	.testimonialsBlock.slider{
+		margin-top:8vh;
+		margin-left: 0;
+		width: 992px;
+		left:50%;
+		transform: translate(-50%, 0);
+	}
+
+	#i2>.sliderLeft{
+		left:33%;
+		transform: translate(-70%, -50%);
+	}
+
+	#i2>.sliderRight{
+		right:33%;
+		transform: translate(70%, -50%);
+	}
+
+	.in2slide>p:first-child{
+		padding-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.in2slide>p{
+		margin-top: 15px;
+		margin-left:  15px;
+		margin-right: 15px;
+	}
+
 	.copyright{
 		grid-column-start: 2;
 	  	grid-column-end: 9;
@@ -1078,6 +1233,42 @@ p{
 
 	.slider{
 		margin-top:20vh;
+	}
+
+	.testimonialsBlock.slider{
+		margin-top:8vh;
+		margin-left: 0;
+		width: 992px;
+		left:50%;
+		transform: translate(-50%, 0);
+	}
+
+	#i2>.sliderLeft{
+		left:33%;
+		transform: translate(-70%, -50%);
+	}
+
+	#i2>.sliderRight{
+		right:33%;
+		transform: translate(70%, -50%);
+	}
+
+	.TSLider{
+		grid-column-start: 3;
+		grid-column-end: 13;
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+
+	.in2slide>p:first-child{
+		padding-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.in2slide>p{
+		margin-top: 15px;
+		margin-left:  15px;
+		margin-right: 15px;
 	}
 
 	.copyright{
@@ -1446,6 +1637,41 @@ p{
 		.portfolio_hidden{
 			font-size: 12px;
 		}
+	}
+
+	.testimonialsBlock.slider{
+		margin-left: 0;
+		width: 1250px;
+		left:50%;
+		transform: translate(-52%, 0);
+	}
+
+	.in2slide>p:first-child{
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.in2slide>p{
+		margin-top: 20px;
+		margin-left:  20px;
+		margin-right: 20px;
+	}
+
+	.TSLider{
+		grid-column-start: 1;
+		grid-column-end: 15;
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+
+	#i2>.sliderLeft{
+		left:36%;
+		transform: translate(-70%, -50%);
+	}
+
+	#i2>.sliderRight{
+		right:33%;
+		transform: translate(70%, -50%);
 	}
 
 	.copyright{

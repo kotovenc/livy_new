@@ -10,7 +10,7 @@ var relX = 0;
 var flagSwitch = [];
 
 function loadSlider(){
-	for(var j=0; j <= $('.slider').last().index(); j++){
+	for(var j=0; j <= 1; j++){
 		var idEl = $('.slider').eq(j).attr('id');
 		var thisSlider =  $('.slider'+'#'+idEl).children('.containerSlider').children('.containerBlock');
 
@@ -69,7 +69,7 @@ function loadOneSLider(idEl){
 }
 
 $(window).resize(function(){
-  	for(var j=0; j <= $('.slider').last().index(); j++){
+  	for(var j=0; j <= 2; j++){
 		var idEl = $('.slider').eq(j).attr('id');
 		var thisSlider =  $('.slider'+'#'+idEl).children('.containerSlider').children('.containerBlock');
 		var numAllSlide =  thisSlider.children('.slider_block').last().index() - 2*numClone[idEl];/*сколько всего слайдов (настоящих)*/
