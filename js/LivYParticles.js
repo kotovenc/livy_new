@@ -1,4 +1,6 @@
 var canvas;
+var corrX = 0;
+var corrY = 0;
 
 function getRandomInt(min, max)
 {
@@ -47,18 +49,15 @@ class Star{
   			}
 
   			if(this_.alpha > 0.1){
-  				this.timerId = setTimeout(tick, 50);
+  				this.timerId = setTimeout(tick, 100);
   			}else{
   				this_.born();
   			}
-		}, 50);
+		}, 100);
   	}
 
   	born(){
   		var this_ = this;
-
-  		corrX=parseInt(canvas.width/4);
-		corrY=parseInt(canvas.height/4);
 
   		this.x = getRandomInt(this.dir*corrX, canvas.width-this.dir*corrX);
     	this.y = getRandomInt(this.dir*corrY, canvas.height-this.dir*corrY);
@@ -75,11 +74,11 @@ class Star{
   			}
 
   			if(this_.alpha < this.maxAlpha){
-  				this.timerId = setTimeout(tick, 50);
+  				this.timerId = setTimeout(tick, 100);
   			}else{
   				this_.start();
   			}
-		}, 50);
+		}, 100);
 
   	}
 }
@@ -88,19 +87,19 @@ $(document).ready(function(){
 	canvas = document.getElementById("particles"),
 	ctx = canvas.getContext('2d');
 	canvas.width = $('#particles').parent().width();
-	canvas.height = $('#particles').parent().height();;
+	canvas.height = $('#particles').parent().height();
+
+	corrX=parseInt(canvas.width/4);
+	corrY=parseInt(canvas.height/4);
 
 	startCanvas();
 });
 
 function startCanvas(){
 	var oneStar = [];
-	var numStar = parseInt((canvas.width*canvas.height)/1000);
+	var numStar = parseInt((canvas.width*canvas.height)/1500);
 
 	for(var i = 0; i< numStar; i++){
-		corrX=parseInt(canvas.width/4);
-		corrY=parseInt(canvas.height/4);
-
 		if(getRandomInt(0, 2)!=0){
 			oneStar[i] = new Star(ctx, getRandomInt(0, canvas.width), getRandomInt(0, canvas.height), 0);
 		}else{
@@ -120,6 +119,6 @@ function startCanvas(){
 		for(var i = 0; i<numStar; i++){
 			oneStar[i].draw();
 		}
-  		timerId = setTimeout(tick, 20);
-	}, 20);
+  		timerId = setTimeout(tick, 50);
+	}, 50);
 }
