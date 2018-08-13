@@ -176,7 +176,7 @@ button{
 
 .about{
 	background: radial-gradient(ellipse, #272c46, black);
-	grid-template-rows: 5% 5% 20% 20% 25% 20% 5%;
+	grid-template-rows: 10% 5% 20% 15% 20% 20% 10%;
 	font-size: 15px;
 }
 
@@ -189,8 +189,8 @@ button{
 .about_cat{
 	z-index: 2;
 	position: absolute;
-	bottom: 50px;
-	right: 100px;
+	position: bottom;
+	
 }
 
 .cat_bg{
@@ -1148,7 +1148,7 @@ button{
 	}
 
 	.about_cat{
-		grid-column-start: 2;
+		grid-column-start: 3;
 	  	grid-column-end: 7;
 	  	grid-row-start: 5;
 	  	grid-row-end: 6;
@@ -1638,7 +1638,7 @@ button{
 	.about_cat{
 		grid-column-start: 2;
 	  	grid-column-end: 7;
-	  	grid-row-start: 5;
+	  	grid-row-start: 6;
 	}
 
 	.grid{
