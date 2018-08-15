@@ -255,15 +255,22 @@ button{
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-position: center;	
+	/*background-position: center;	
 	background-image: url(img/space.jpg);
-	background-size: cover;
+	background-size: cover;*/
 }
 
 .black_grad{
 	height: 100%;
 	width: 100%;
-	background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 1));
+	background: radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1));
+}
+
+#particles{
+  width: 100%;
+  height: 100%;
+
+  filter: blur(0px);
 }
 
 .item{
@@ -322,6 +329,252 @@ button{
 
 .footer_contact{
 
+}
+/*------------------------------SLider-------------------*/
+.about_slider{
+	grid-column-start: 2;
+	grid-column-end: 14;
+	grid-row-start: 4;
+}
+
+.slider{
+	margin-top:10vh;
+	width: 100%;
+	height: 25vh;
+
+	position: relative;
+}
+
+.containerSlider{
+	width: 500px;/*равно размеру слайда*на кол-во отображенных слайдов (само ставится)*/
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+	position: relative;
+
+	//background: black;
+}
+
+.containerBlock{
+	height: 100%;
+	width: 9000px;/*равно (кол-во слайдов + кол-во клонов)*на их ширину (само ставится)*/
+}
+
+.slider_block{
+	height: 100%;/*общие параметры для каждого слайда*/
+	float:left;
+
+	pointer-events: none;
+	-moz-user-select: none; 
+	-webkit-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+}
+
+#i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+	width: 15.5vw;/*любой размер*/
+	max-width: 170px;
+	min-width: 160px;
+}
+
+.in1slide{
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.in1slide>.pic{
+	width: 100%;
+	margin-bottom: -8px;
+}
+
+.in1slide>p{
+	font-size: 25px;
+}
+
+.in1slide>p:last-child{
+	margin-top: -5px;
+	font-size: 18px;
+}
+
+
+.i1specialEl{
+	opacity: 1 !important;
+}
+
+.sliderLeft{
+	position:absolute;
+
+	top: 35%;
+	transform: translate(-70%, -50%);
+}
+
+.sliderRight{
+	position:absolute;
+
+	top: 35%;
+	transform: translate(70%, -50%);
+	right:0;
+}
+
+/*------------------------------SLider-------------------*/
+
+#order1{
+	justify-self: right;
+	margin-right: 15px;
+	align-self: center;
+}
+
+#order2{
+	justify-self: left;
+	margin-left: 15px;
+	align-self: center;
+}
+
+.copyright{
+	max-width: 500px;
+	justify-self: left;
+}
+
+.footer_contact{
+	justify-self: right;
+}
+
+.portfolio_block{
+	max-width: 700px;
+	position: relative;
+	overflow: hidden;
+	max-height: 1000px;
+	background: none;
+	border: none;
+	//border: 2px solid red;
+}
+
+.overlay{
+	opacity: 0.5;
+	box-sizing: border-box;
+	padding: 10px;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 30%);
+	transition: opacity 0.5s;
+}
+
+.portfolio_hidden{
+	box-sizing: border-box;
+	height: 100%;
+	padding: 10px;
+	position: relative;
+	top: -50px;
+	font-size: 20px;
+	transition: all 0.5s;
+}
+#p_block1{
+	background: url(img/firetag.jpg);
+	background-size: cover;
+}
+
+#p_block2{
+	background: url(img/firetag.jpg);
+	background-size: cover;
+}
+
+.more_portfolio{
+	font-size: 20px;
+	font-family: 'Open Sans';
+	text-decoration: none;
+	color: white;
+	//display: inline-block;
+	height: 25px;
+	margin-top: -25px;
+}
+
+.portfolio_hidden>a{
+	text-decoration: none;
+	//position: absolute;
+	
+	 position: absolute; 
+	  left: 0; 
+	  right: 0; 
+	  margin-left: auto; 
+	  margin-right: auto; 
+	  width: 200px;
+	  
+}
+
+.portf_site_link{
+	bottom: 10%;
+	font-family: 'Open Sans';
+}
+
+.portf_case_link{
+	bottom: 3%;
+	font-family: 'Open Sans';
+	color: white;
+}
+
+#p_block1>.portfolio_hidden>.portf_site_link{
+	color: green;
+}
+
+#p_block2>.portfolio_hidden>.portf_site_link{
+	color: green;
+}
+
+.form1{
+	display: none;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+	grid-template-rows: 100px 1fr 1fr 10fr 2fr 100px;
+}
+
+.form1_bg{
+	background-color: rgba(0,0,0,0.85);
+}
+
+.form_grid{
+	display: grid;
+	grid-template-columns: 1fr 30px 1fr;
+}
+
+.submit{
+	grid-template-rows: 50px 1fr 50px 1fr 20fr 1fr 50px;
+}
+
+.submit>input[type="name"]{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+}
+
+.submit>input[type="mail"]{
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+}
+
+.submit>select{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+}
+
+.submit>input[type="text"]{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 5;
+}
+
+.submit>input[type="submit"]{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 7;
+}
+.submit>input{
+	width: 100%;
 }
 
 .about_slider{
@@ -776,6 +1029,47 @@ button{
 		  	grid-row-start: 4;
 		  	grid-row-end: 7;
 		}
+	}
+
+	.about_slider{
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 4;
+	}
+	
+	.slider{
+		height: 13vh;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		min-width: 90px;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		font-size: 12px;
+	}
+
+	#i1>.containerSlider>.containerBlock>.slider_block>.in1slide>p:last-child{/*для каждого слайда свой стиль (менять надо только идшник)*/
+		font-size: 10px;
+	}
+
+	.sliderLeft{
+		top: 35%;
+		transform: translate(-35%, -50%);
+	}
+
+	.sliderRight{
+		top: 35%;
+		transform: translate(90%, -50%);
+		right:0;
+	}
+
+	.sliderLeft>img{
+		width: 50%;
+	}
+
+	.sliderRight>img{
+		width: 50%;
 	}
 
 	.order_button{
@@ -1284,6 +1578,10 @@ button{
 		}
 	}
 
+	.slider{
+		margin-top:20vh;
+	}
+
 	.copyright{
 		grid-column-start: 3;
 	  	grid-column-end: 8;
@@ -1667,6 +1965,7 @@ button{
 }
 
 @media(min-width: 1200px){
+
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -2025,7 +2324,6 @@ ul {
 	font-weight:400;
 	text-shadow: none;
 }
-
 
 
 .menu-hidden a {

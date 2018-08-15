@@ -9,11 +9,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
 	<meta name="viewport" content="width=device-width">
 </head>
 
@@ -86,9 +84,62 @@
 	<div class="item about_under">
 		<p>The fat cat sat on the mat bat away with paws eat and than sleep on your face so taco cat backwards spells taco cat but scream at teh bath litter kitter kitty litty little kitten big roar roar feed me, terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry.</p>
 	</div>
-	<div class="item about_slider"><h1>Слайдер коля плес</h1></div>
-	<div class="item about_cat"><img src="img/cat.png"></div>
+	<div class="item about_slider">
+		<div class="slider" id="i1" withGrab="1">
+			<div class="containerSlider">
+				<div class="containerBlock" numActSlide = "5" haveSpecialCenterSlide = "3" switchWinSize="992" switchNumActSlide="3">
+					<div class="slider_block active">
+						<div class="in1slide">
+							<img class="pic" src="img/face1.png">
+							<p>Дмитрий</p>
+							<p>Верстка</p>
+						</div>
+					</div>
 	
+					<div class="slider_block">
+						<div class="in1slide">
+							<img class="pic" src="img/face2.png">
+							<p>Лев</p>
+							<p>Дизайн</p>
+						</div>
+					</div>
+	
+					<div class="slider_block">
+						<div class="in1slide">
+							<img class="pic" src="img/face3.png">
+							<p>Влад</p>
+							<p>Верстка</p>
+						</div>
+					</div>
+
+					<div class="slider_block">
+						<div class="in1slide">
+							<img class="pic" src="img/face4.png">
+							<p>Галина</p>
+							<p>Тим лидер</p>
+						</div>
+					</div>
+	
+					<div class="slider_block">
+						<div class="in1slide">
+							<img class="pic" src="img/face5.png">
+							<p>Артем</p>
+							<p>Артем</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sliderLeft">
+				<img src="img/slider1left.png">
+			</div>
+	
+			<div class="sliderRight">
+				<img src="img/slider1right.png">
+			</div>
+		</div>
+	</div>
+	<div class="item about_cat"><img src="img/cat_no_bg.png"></div>
 	<div class="item about_catext"></div>
 		<!--div class="cat_block">
 			<img class="about_cat" src="img/cat_no_bg.png">
@@ -207,7 +258,8 @@
 	</div>
 
 	<div class="space_img">
-		<div class="black_grad">			
+		<div class="black_grad">		
+			<canvas id="particles"></canvas>	
 		</div>
 	</div>
 	<!--div class="large-grid">
@@ -240,6 +292,8 @@
   	<script src="js/menu.js"></script>
   	<script src="js/portfolio.js"></script>
   	<script src="js/footer.js"></script>
+  	<script src="js/LivYScripts.js"></script>
+  	<script src="js/LivYParticles.js"></script>
 </body>
 
 </html>
