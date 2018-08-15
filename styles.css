@@ -252,15 +252,15 @@ p{
 	position: fixed;
 	top: 0;
 	left: 0;
-	/*background-position: center;	
-	background-image: url(img/space.jpg);
-	background-size: cover;*/
+	background-position: center;	
+	background-image: url(img/spaceBack.png);
+	background-size: cover;
 }
 
 .black_grad{
 	height: 100%;
 	width: 100%;
-	background: radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1));
+	/*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1));*/
 }
 
 #particles{

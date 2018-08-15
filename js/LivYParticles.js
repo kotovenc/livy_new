@@ -2,42 +2,56 @@ var canvas;
 var corrX = 0;
 var corrY = 0;
 
-function getRandomInt(min, max)
+function gaussianRand() {
+  var rand = 0;
+
+  for (var i = 0; i < 6; i += 1) {
+    rand += Math.random();
+  }
+
+  return rand / 6;
+}
+
+function getRandomInt(start, end) {
+  return Math.floor(start + gaussianRand() * (end - start + 1));
+}
+
+function getRandomInt123(min, max)
 {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 class Star{
-  	constructor(ctx, x, y, dir) {
-  		this.ctx = ctx;
+  	constructor(ctx, x, y) {
+  	  this.ctx = ctx;
     	this.x = x;
     	this.y = y;
-    	this.dir = dir;
 
- 		this.maxAlpha = Math.random() * (1 - 0.7 + 1) + 0.7;
+ 		  this.maxAlpha = Math.random() * (0.9 - 0.5 + 1) + 0.7;
     	this.alpha = this.maxAlpha;
-    	this.color = 'rgba('+ (255 - getRandomInt(0, 5)*30) +', '+ (255 - getRandomInt(0, 5)*30) +', '+ (255 - getRandomInt(0, 5)*30) +'';
-  		this.size = Math.random() * (1 - 0.5 + 1) + 0.5;
+      var randColor = getRandomInt(0, 5)*30;
+    	this.color = 'rgba('+ (230 - randColor) +', '+ (230 - randColor) +', '+ (255) +'';
+  		this.size = 1;
   	}
 
   	draw(){
-		this.ctx.fillStyle = this.color +', ' + Math.abs(this.alpha) + ')';
-		this.ctx.beginPath(); 
-		this.ctx.arc(this.x, this.y, this.size, 50, 0, Math.PI*2, false); 
-		this.ctx.closePath(); 
-		this.ctx.fill();
+		  this.ctx.fillStyle = this.color +', ' + Math.abs(this.alpha) + ')';
+		  this.ctx.beginPath(); 
+		  this.ctx.fillRect(this.x, this.y, 1, 1);
+		  this.ctx.closePath(); 
+		  this.ctx.fill();
   	}
 
-  	start(){
+  	life(){
   		var this_ = this;
-  		setTimeout(function (){ this_.died();}, getRandomInt(1000, 5000));
+  		this.timer = setTimeout(function (){ this_.died();}, getRandomInt(1000, 5000));
   	}
 
   	died(){
   		this.flag = 0;
   		var this_ = this;
 
-  		this.timerDied = setTimeout(function tick() {
+  		this.timer = setTimeout(function tick() {
   			if(this_.flag == 0){
   				this_.alpha += 0.1;
   			}else{
@@ -49,7 +63,7 @@ class Star{
   			}
 
   			if(this_.alpha > 0.1){
-  				this.timerId = setTimeout(tick, 100);
+  				this_.timer = setTimeout(tick, 100);
   			}else{
   				this_.born();
   			}
@@ -59,24 +73,20 @@ class Star{
   	born(){
   		var this_ = this;
 
-  		this.x = getRandomInt(this.dir*corrX, canvas.width-this.dir*corrX);
-    	this.y = getRandomInt(this.dir*corrY, canvas.height-this.dir*corrY);
+      this.x = getRandomInt(-corrX, canvas.width + corrX);
+      this.y = getRandomInt(-corrY, canvas.height + corrY);
 
-  		this.timerBorn = setTimeout(function tick() {
+  		this.timer = setTimeout(function tick() {
+  			if(this_.flag == 1 && this_.alpha < this_.maxAlpha){
+  				this_.alpha += 0.1;
+  			}else{
+  				this_.flag = 0;
+  			}
+
   			if(this_.flag == 1){
-  				this_.alpha += 0.2;
+  				this_.timer = setTimeout(tick, 100);
   			}else{
-  				this_.flag = 0;
-  			}
-
-  			if(this_.alpha > this.maxAlpha){
-  				this_.flag = 0;
-  			}
-
-  			if(this_.alpha < this.maxAlpha){
-  				this.timerId = setTimeout(tick, 100);
-  			}else{
-  				this_.start();
+  				this_.life();
   			}
 		}, 100);
 
@@ -89,28 +99,22 @@ $(document).ready(function(){
 	canvas.width = $('#particles').parent().width();
 	canvas.height = $('#particles').parent().height();
 
-	corrX=parseInt(canvas.width/4);
-	corrY=parseInt(canvas.height/4);
+	corrX=parseInt(canvas.width/5);
+	corrY=parseInt(canvas.height/5);
 
 	startCanvas();
 });
 
 function startCanvas(){
 	var oneStar = [];
-	var numStar = parseInt((canvas.width*canvas.height)/1500);
+	var numStar = parseInt((canvas.width*canvas.height)/1000);
 
 	for(var i = 0; i< numStar; i++){
-		if(getRandomInt(0, 2)!=0){
-			oneStar[i] = new Star(ctx, getRandomInt(0, canvas.width), getRandomInt(0, canvas.height), 0);
-		}else{
-			oneStar[i] = new Star(ctx, getRandomInt(0+corrX, canvas.width-corrX), getRandomInt(0+corrY, canvas.height-corrY), 1);
-		}
+    oneStar[i] = new Star(ctx, getRandomInt(-corrX, canvas.width + corrX), getRandomInt(-corrY, canvas.height + corrY));
 
 		oneStar[i].draw();
 
-		if(getRandomInt(0, 5) != 0){
-			oneStar[i].start();
-		}
+		oneStar[i].life();
 	}
 
 	var timerId = setTimeout(function tick() {
