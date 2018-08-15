@@ -241,7 +241,7 @@ p{
 }
 
 .testimonials{
-	grid-template-rows: 100px 50px 10fr 50px;
+	grid-template-rows: 10vh 4vh 10fr 50px;
 	background-color: #272c46;
 }
 
@@ -332,12 +332,14 @@ p{
 	grid-column-start: 2;
 	grid-column-end: 14;
 	grid-row-start: 4;
+	grid-row-end: 4;
 }
 
 .slider{
-	margin-top:10vh;
+	margin-top:188px;
 	width: 100%;
-	height: 25vh;
+	height: 200px;
+	min-height: 200px;
 
 	position: relative;
 }
@@ -351,7 +353,7 @@ p{
 
 	position: relative;
 
-	//background: black;
+	/*background: black;*/
 }
 
 .containerBlock{
@@ -427,6 +429,8 @@ p{
 	overflow: hidden;
 
 	position: relative;
+	min-height: 0px;
+	max-height: 620px;
 }
 
 .testimonials_h{
@@ -446,6 +450,15 @@ p{
 
 	overflow: hidden;
 }
+
+/*если нужно выделение текста на отзывах (желательно без граблей слайдер тогда)*/
+/*#i2>.containerSlider>.containerBlock>.slider_block{
+	pointer-events: auto;
+	-moz-user-select: text; 
+	-webkit-user-select: text; 
+	-ms-user-select: text; 
+	user-select: text;
+}*/
 
 #i2>.containerSlider>.containerBlock>.slider_block{/*для каждого слайда свой стиль (менять надо только идшник)*/
 	width: 36vw;/*любой размер*/
@@ -480,6 +493,32 @@ p{
 .in2slide>p:last-child{
 	margin-top: 0;
 	font-size: 15px;
+}
+
+@media(max-height: 700px){
+	.in2slide{
+		height: 84%;
+	}
+
+	.in2slide>p{
+		font-size: 2.2vh;
+	}
+
+	.in2slide>p:last-child{
+		font-size: 2vh;
+	}
+}
+
+@media(max-height: 660px){
+	.in2slide{
+		height: 80%;
+	}
+}
+
+@media(max-height: 550px){
+	.in2slide{
+		height: 78%;
+	}
 }
 
 .i2specialEl{
@@ -743,7 +782,8 @@ p{
 	}
 	
 	.slider{
-		height: 13vh;
+		height: 110px;
+		min-height: 110px;
 	}
 
 	#i1>.containerSlider>.containerBlock>.slider_block{
@@ -814,6 +854,16 @@ p{
 
 	.in2slide>p:last-child{
 		font-size: 13px;
+	}
+
+	@media(max-height: 700px){
+		.in2slide>p{
+			font-size: 2.1vh;
+		}
+
+		.in2slide>p:last-child{
+			font-size: 1.9vh;
+		}
 	}
 	
 	.order_button{
@@ -1231,10 +1281,6 @@ p{
 		}
 	}
 
-	.slider{
-		margin-top:20vh;
-	}
-
 	.testimonialsBlock.slider{
 		margin-top:8vh;
 		margin-left: 0;
@@ -1641,9 +1687,9 @@ p{
 
 	.testimonialsBlock.slider{
 		margin-left: 0;
-		width: 1250px;
-		left:50%;
-		transform: translate(-52%, 0);
+		width: 1290px;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 
 	.in2slide>p:first-child{
@@ -1662,15 +1708,17 @@ p{
 		grid-column-end: 15;
 		grid-row-start: 3;
 		grid-row-end: 3;
+
+		//overflow: visible;
 	}
 
 	#i2>.sliderLeft{
-		left:36%;
+		left:34%;
 		transform: translate(-70%, -50%);
 	}
 
 	#i2>.sliderRight{
-		right:33%;
+		right:34%;
 		transform: translate(70%, -50%);
 	}
 

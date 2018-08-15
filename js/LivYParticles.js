@@ -107,7 +107,7 @@ $(document).ready(function(){
 
 function startCanvas(){
 	var oneStar = [];
-	var numStar = parseInt((canvas.width*canvas.height)/1000);
+	var numStar = parseInt((canvas.width*canvas.height)/2500);
 
 	for(var i = 0; i< numStar; i++){
     oneStar[i] = new Star(ctx, getRandomInt(-corrX, canvas.width + corrX), getRandomInt(-corrY, canvas.height + corrY));
