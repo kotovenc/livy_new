@@ -650,7 +650,6 @@ button{
 }
 
 .form1{
-	display: none;
 	text-align: center;
 	width: 100%;
 	position: absolute;
@@ -701,12 +700,6 @@ button{
 }
 .submit>input{
 	width: 100%;
-}
-
-.about_slider{
-	grid-column-start: 1;
-	grid-column-end: 14;
-	grid-row-start: 4;
 }
 
 #order1{
