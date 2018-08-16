@@ -217,12 +217,38 @@ button{
 	text-align: center;
 }
 
+.services_cat1 {
+    z-index: 1;
+    position: absolute;
+    bottom: -5px;
+    justify-self: center;
+    text-align: center;
+}
+
+.services_cat2{
+    z-index: 0;
+    position: absolute;
+    bottom: -5px;
+    justify-self: center;
+    text-align: center;
+}
+
+.services_cat1 img {
+    min-width: 198px;
+    min-height: 164px;
+}
+
+.services_cat2 img {
+    min-width: 198px;
+    min-height: 164px;
+}
+
 #s_triangles{
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	height: 18px;
-	margin-bottom: -5px;
+	margin-bottom: 0px;
 	width: 100%;
 	background-position: right;
 	background-image: url(img/spikes_light.png);
@@ -1093,8 +1119,8 @@ button{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px  repeat(5, 170px) 1fr;
-		min-height: 1150px;
+		grid-template-rows: 190px  repeat(5, 170px) 200px;
+		min-height: 1250px;
         font-size: 12px;
 	}
     .services img {
@@ -1143,12 +1169,28 @@ button{
    	grid-row-end: 7;	
 	justify-self: center;
 	}
+    .services_cat1{
+    bottom: -15px;
+	grid-column-start: 4;
+	grid-column-end: 5;
+   	grid-row-start: 7;
+   	grid-row-end: 8;	
+	}
+    .services_cat2{
+    bottom: -15px;
+	grid-column-start: 4;
+	grid-column-end: 5;
+   	grid-row-start: 7;
+   	grid-row-end: 8;	
+	}
+    
+    
 	@media(max-width: 399.9px){
 		
 		.services{
 		
-		grid-template-rows: 190px  repeat(5, 340px) 1fr;
-			min-height: 1900px;
+		grid-template-rows: 190px  repeat(5, 340px) 200px;
+			min-height: 2050px;
 	}
 		.services1{
 	grid-column-start: 2;
@@ -1186,6 +1228,21 @@ button{
    	grid-row-end: 7;	
 	justify-self: center;
 	}
+        
+        .services_cat1 {
+    bottom: 35px;
+    grid-column-start: 1;
+	grid-column-end: 5;
+   	grid-row-start: 7;
+   	grid-row-end: 8;
+    }
+         .services_cat2 {
+    bottom: 35px;
+    grid-column-start: 1;
+	grid-column-end: 5;
+   	grid-row-start: 7;
+   	grid-row-end: 8;	
+    }
 	}
 	.form1>h1{
 		grid-column-start: 2;
@@ -1552,7 +1609,7 @@ button{
     }
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px repeat(5, 180px) 50px;
+		grid-template-rows: 190px repeat(5, 180px) 200px;
 		min-height: 1300px;
 		font-size: 13px;
 	}
@@ -1593,7 +1650,20 @@ button{
    		grid-row-end: 7;	
 		justify-self: center;
 	}
-
+    .services_cat1{
+        bottom: -15px;
+        grid-column-start: 9;
+		grid-column-end: 12;
+   		grid-row-start: 7;
+   		grid-row-end: 8;	
+    }
+    .services_cat2{
+        bottom: -15px;
+        grid-column-start: 9;
+		grid-column-end: 12;
+   		grid-row-start: 7;
+   		grid-row-end: 8;	
+    }
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1891,8 +1961,8 @@ button{
     }
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px repeat(5, 170px) 50px;
-		min-height: 1200px;
+		grid-template-rows: 190px repeat(5, 170px) 200px;
+		min-height: 1250px;
 	}
 	
 	.services1{
@@ -1930,7 +2000,15 @@ button{
 	   	grid-row-start: 6;
 	   	grid-row-end: 7;	
 		justify-self: center;
-	}	
+	}
+    .services_cat1, .services_cat2{
+        bottom: -15px;
+		grid-column-start: 9;
+		grid-column-end: 12;
+	   	grid-row-start: 7;
+	   	grid-row-end: 8;	
+	}
+    
 
 	.form1>h1{
 		grid-column-start: 2;
@@ -2214,8 +2292,9 @@ button{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px 160px 0px 210px  1fr;	
-		min-height: 700px;
+		grid-template-rows: 190px 160px 0px 210px  200px;	
+        min-height: 760px;
+        max-height: 760px;
 	}
      .services_head {
         grid-column-start: 2;
@@ -2236,7 +2315,8 @@ button{
 	@media (max-height: 700px)
 	{
 		.services{
-		grid-template-rows: 190px calc(100vh - 470px) 0px 210px  1fr;	
+		grid-template-rows: 190px calc(100vh - 470px) 0px 210px  200px;	
+        min-height: calc(100vh + 130px);
 		}
 	}
 	.services1{
@@ -2276,6 +2356,12 @@ button{
    		grid-row-end: 3;	
 		justify-self:center;
 	}
+    .services_cat1, .services_cat2{
+		grid-column-start: 7;
+		grid-column-end: 9;
+   		grid-row-start: 5;
+   		grid-row-end: 6;	
+	}	
 
 	.form1>h1{
 		grid-column-start: 2;
@@ -2584,7 +2670,13 @@ button{
 	justify-self: center;
 		width: 160px;
 }
-
+    .services_cat1, .services_cat2{
+	grid-column-start: 7;
+	grid-column-end: 9;
+   	grid-row-start: 6;
+   	grid-row-end: 7;
+}
+    
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
