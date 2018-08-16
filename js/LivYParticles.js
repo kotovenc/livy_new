@@ -31,7 +31,7 @@ class Star{
     	this.alpha = this.maxAlpha;
       var randColor = getRandomInt(0, 5)*30;
     	this.color = 'rgba('+ (230 - randColor) +', '+ (230 - randColor) +', '+ (255) +'';
-  		this.size = 2;
+  		this.size = getRandomInt123(1, 2);
   	}
 
   	draw(){
