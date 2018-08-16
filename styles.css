@@ -577,12 +577,6 @@ button{
 	width: 100%;
 }
 
-.about_slider{
-	grid-column-start: 1;
-	grid-column-end: 14;
-	grid-row-start: 4;
-}
-
 #order1{
 	justify-self: right;
 	margin-right: 15px;
