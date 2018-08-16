@@ -1,4 +1,6 @@
 var canvasStars;
+var oneStar = [];
+var numStar
 var corrX = 0;
 var corrY = 0;
 
@@ -104,18 +106,20 @@ class Bubble{
       this.ctx = ctx;
       this.x = x;
       this.y = y;
-      this.vx = getRandomInt123(-1, 1);
-      this.vy = getRandomInt123(-1, 1);
+      this.vx = 0.5*getRandomInt123(-1, 1);
+      this.vy = 0.5*getRandomInt123(-1, 1);
+      if(this.vx == 0 && this.vy == 0){
+        this.vx = 0.5;
+        this.vy = 0.5;
+      }
 
       this.maxAlpha = 0.5;
       this.alpha = this.maxAlpha;
 
       if(getRandomInt123(0, 1) == 0){
-        var randColor = getRandomInt123(0, 3)*30;
-        this.color = 'rgba('+ (200  - randColor) +', '+ (200 - randColor) +', '+ (0) +'';
+        this.color = 'rgba('+ (145) +', '+ (183) +', '+ (200) +'';
       }else{
-        var randColor = getRandomInt123(0, 1)*30;
-        this.color = 'rgba('+ (80) +', '+ (100) +', '+ (150 + randColor) +'';
+        this.color = 'rgba('+ (242) +', '+ (204) +', '+ (48) +'';
       }
 
 
@@ -142,7 +146,7 @@ class Bubble{
       this_.flag = 1;
 
       this.timerDied = setTimeout(function tick() {
-        if(this_.alpha > 0.1 && this_.flag == 1){
+        if(this_.alpha > 0.2 && this_.flag == 1){
 
           this_.alpha -= 0.05;
           this_.timerDied = setTimeout(tick, 50);
@@ -216,8 +220,7 @@ $(document).ready(function(){
 });
 
 function startCanvas(){
-	var oneStar = [];
-	var numStar = parseInt((canvasStars.width*canvasStars.height)/2000);
+	numStar = parseInt((canvasStars.width*canvasStars.height)/2000);
 
 	for(var i = 0; i< numStar; i++){
     oneStar[i] = new Star(ctx, getRandomInt(-corrX, canvasStars.width + corrX), getRandomInt(-corrY, canvasStars.height + corrY));
