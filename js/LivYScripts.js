@@ -151,21 +151,21 @@ $(document).ready(function(){
 				if(numberOfActSlide - 0.5 < 0){
 					if(numberOfActSlide - 0.5 < -0.3){
 						for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
-							thisSlider.children('.slider_block').eq(parseInt(-1) + parseInt(numClone[idMoveMouse]) + parseInt(thisSlider.attr('numActSlide')/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0s ease"});
+							thisSlider.children('.slider_block').eq(parseInt(-1) + parseInt(numClone[idMoveMouse]) + parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0s ease"});
 						}
 					}else{
 						for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
-							thisSlider.children('.slider_block').eq(parseInt(-1) + parseInt(numClone[idMoveMouse]) + parseInt(thisSlider.attr('numActSlide')/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0.5s ease"});
+							thisSlider.children('.slider_block').eq(parseInt(-1) + parseInt(numClone[idMoveMouse]) + parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0.5s ease"});
 						}
 					}
 				}else{/*если подход к границе то добавить анимацию на след слайд а с предыдущего убрать*/
 					if(numberOfActSlide - 0.5 > thisSlider.children('.slider_block').last().index() - 2*numClone[idEl] + 0.3){/*отсчет от всех настоящих слайдов*/
 						for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
-							thisSlider.children('.slider_block').eq(parseInt(numberOfActSlide - 0.5) + parseInt(numClone[idMoveMouse]) + parseInt(thisSlider.attr('numActSlide')/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0s ease"});
+							thisSlider.children('.slider_block').eq(parseInt(numberOfActSlide - 0.5) + parseInt(numClone[idMoveMouse]) + parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0s ease"});
 						}
 					}else{
 						for(var i=0; i<numSpecialCenterSlide[idEl]; i++){
-							thisSlider.children('.slider_block').eq(parseInt(numberOfActSlide - 0.5) + parseInt(numClone[idMoveMouse]) + parseInt(thisSlider.attr('numActSlide')/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0.5s ease"});
+							thisSlider.children('.slider_block').eq(parseInt(numberOfActSlide - 0.5) + parseInt(numClone[idMoveMouse]) + parseInt(numClone[idEl]/2) + parseInt(numSpecialCenterSlide[idEl]/2)-i).addClass(idEl + 'specialEl').css({transition:"opacity 0.5s ease"});
 						}
 					}
 				}
