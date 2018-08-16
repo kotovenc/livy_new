@@ -482,11 +482,11 @@ button{
 }
 
 .testimonials_h{
-	grid-column-start: 2;
-	grid-column-end: 14;
+	grid-column-start: 1;
+	grid-column-end: 15;
 	grid-row-start: 2;
 	grid-row-end: 2;
-	font-size: 50px;
+	/*font-size: 50px;*/
 	text-align: center;
 }
 
@@ -561,11 +561,26 @@ button{
 	.in2slide{
 		height: 80%;
 	}
+
+	.testimonials{
+		grid-template-rows: 50px 10px 10fr 50px;
+		background-color: #272c46;
+	}
 }
 
 @media(max-height: 550px){
 	.in2slide{
 		height: 78%;
+	}
+}
+
+@media(max-height: 500px){
+	.in2slide>p{
+		font-size: 11px;
+	}
+
+	.in2slide>p:last-child{
+		font-size: 10px;
 	}
 }
 
@@ -1282,7 +1297,7 @@ button{
 	}
 
 	.testimonialsBlock.slider{
-		margin-top:8vh;
+		//margin-top:8vh;
 		margin-left: 0;
 		width: 992px;
 		left:50%;
@@ -1327,6 +1342,16 @@ button{
 
 		.in2slide>p:last-child{
 			font-size: 1.9vh;
+		}
+	}
+
+	@media(max-height: 500px){
+		.in2slide>p{
+			font-size: 10.5px;
+		}
+
+		.in2slide>p:last-child{
+			font-size: 9.5px;
 		}
 	}
 	
@@ -1648,7 +1673,7 @@ button{
 	}
 
 	.testimonialsBlock.slider{
-		margin-top:8vh;
+		//margin-top:8vh;
 		margin-left: 0;
 		width: 992px;
 		left:50%;
@@ -1967,7 +1992,7 @@ button{
 	}
 
 	.testimonialsBlock.slider{
-		margin-top:8vh;
+		//margin-top:8vh;
 		margin-left: 0;
 		width: 992px;
 		left:50%;

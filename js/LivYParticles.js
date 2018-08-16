@@ -93,6 +93,14 @@ class Star{
   	}
 }
 
+$(window).resize(function(){
+  canvas.width = $('#particles').parent().width();
+  canvas.height = $('#particles').parent().height();
+
+  corrX=parseInt(canvas.width/5);
+  corrY=parseInt(canvas.height/5);
+});
+
 $(document).ready(function(){
 	canvas = document.getElementById("particles"),
 	ctx = canvas.getContext('2d');
