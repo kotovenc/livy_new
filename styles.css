@@ -257,8 +257,52 @@ button{
 	top: 0;
 	left: 0;
 	background-position: center;	
-	background-image: url(img/spaceBack.png);
+	background-image: url(img/spaceBack4.png);
 	background-size: cover;
+}
+
+@keyframes spacecat{
+	0%{
+    	transform: rotateZ(-30deg) scaleX(1);
+		bottom: 0%;
+		left: -200px;
+	}
+	40%{
+		bottom: 80%;
+		left: 120%;
+		transform: rotateZ(330deg) scaleX(1); 
+	}
+	45%{
+		transform: rotateZ(330deg) scaleX(-1);
+	}
+	50%{
+		bottom: 10%;
+		left: 120%;
+		transform: rotateZ(330deg) scaleX(-1);
+	}
+	90%{
+		transform: rotateZ(-30deg) scaleX(-1);
+		bottom: 70%;
+		left: -500px;
+	}
+
+}
+
+.spacecat{
+	position: fixed;
+	bottom: 0;
+	height: 100vh;
+	width: 100vw;
+	//left: -200px;
+
+}
+
+.spacecat>img{
+	position: absolute;
+	bottom: 0%;
+	left: -200px;
+	height: 100px;
+	animation: spacecat 50s infinite;
 }
 
 .black_grad{
@@ -681,16 +725,14 @@ button{
 	grid-row-start: 1;
 }
 
-.submit>select{
-	grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 3;
-}
-
 .submit>input[type="text"]{
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 5;
+	font-family: 'Open Sans';
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 150px;
 }
 
 .submit>input[type="submit"]{
@@ -900,9 +942,12 @@ button{
 	border: none;
 	width: 100%;
 	height: 100%;
+
 	-webkit-appearance: none; 
     -moz-appearance: none;
 	appearance: none;
+
+	padding-left: 10px;
 }
 
 .form1_select>select:hover{
@@ -923,15 +968,6 @@ button{
 	position: absolute;
 	margin-top: -28px;
 	right: 10px;
-}
-
-.submit>input[type="text"]{
-	grid-column-start: 1;
-	grid-column-end: 4;
-	grid-row-start: 5;
-	font-family: 'Open Sans';
-	padding-left: 10px;
-	padding-top: 10px; 
 }
 
 .submit>input[type="text"]:focus{
@@ -1314,7 +1350,7 @@ button{
 	  	font-size: 11px;
 	}
 
-	.footer_contact>img{
+	.footer_contact>a>img{
 		height: 25px;
 	}
 
@@ -1654,7 +1690,7 @@ button{
 	  	font-size: 16px;
 	}
 
-	.footer_contact>img{
+	.footer_contact>a>img{
 		height: 35px;
 	}
 
@@ -1980,7 +2016,7 @@ button{
 	  	font-size: 16px;
 	}
 
-	.footer_contact>img{
+	.footer_contact>a>img{
 		height: 35px;
 	}
 
@@ -2292,7 +2328,7 @@ button{
 	  	font-size: 16px;
 	}
 
-	.footer_contact>img{
+	.footer_contact>a>img{
 		height: 35px;
 	}
 
@@ -2635,7 +2671,7 @@ button{
 	  	font-size: 16px;
 	}
 
-	.footer_contact>img{
+	.footer_contact>a>img{
 		height: 35px;
 	}
 

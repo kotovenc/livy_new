@@ -31,13 +31,13 @@ class Star{
     	this.alpha = this.maxAlpha;
       var randColor = getRandomInt(0, 5)*30;
     	this.color = 'rgba('+ (230 - randColor) +', '+ (230 - randColor) +', '+ (255) +'';
-  		this.size = 1;
+  		this.size = 2;
   	}
 
   	draw(){
 		  this.ctx.fillStyle = this.color +', ' + Math.abs(this.alpha) + ')';
 		  this.ctx.beginPath(); 
-		  this.ctx.fillRect(this.x, this.y, 1, 1);
+		  this.ctx.fillRect(this.x, this.y, 2, 2);
 		  this.ctx.closePath(); 
 		  this.ctx.fill();
   	}
