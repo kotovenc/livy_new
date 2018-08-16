@@ -368,6 +368,7 @@ button{
 }
 
 .order_button:hover{
+	cursor: pointer;
 	box-shadow: 0 0 20px 5px rgba(242, 208, 48, 0.5);
 }
 
@@ -925,7 +926,7 @@ button{
 
 .icon_class{
 	position: relative;
-	height: 30px;
+	height: 0px;
 	margin-top: 0px;
 }
 

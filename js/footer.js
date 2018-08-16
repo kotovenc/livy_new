@@ -42,7 +42,6 @@ $(document).ready(function () {
 	    	if ($.trim($(this).val()) == '') {
 	            isValid = false;
 	            $(this).css({
-	                "border": "1px solid red",
 	                "background": "#FFCECE"
 	            });
 	        }
