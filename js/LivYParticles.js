@@ -191,30 +191,8 @@ $(window).resize(function(){
   corrX=parseInt(canvasStars.width/5);
   corrY=parseInt(canvasStars.height/5);
 
-  var oldNumStar = numStar;
-  if(oldNumStar < parseInt((canvasStars.width*canvasStars.height)/2000)){
-    numStar = parseInt((canvasStars.width*canvasStars.height)/2000);
-
-    for(var i = oldNumStar; i< numStar; i++){
-      oneStar[i] = new Star(ctx, getRandomInt(-corrX, canvasStars.width + corrX), getRandomInt(-corrY, canvasStars.height + corrY));
-
-      oneStar[i].life();
-    }
-  }
-
   canvasBubbles.width = $('#bubbles').parent().width();
   canvasBubbles.height = $('#bubbles').parent().height();
-
-  var oldNumBubble = numBubble;
-  if(oldNumBubble < parseInt((canvasBubbles.width*canvasBubbles.height)/10000)){
-    numBubble = parseInt((canvasBubbles.width*canvasBubbles.height)/10000);
-
-    for(var i = oldNumBubble; i< numBubble; i++){
-      oneBubble[i] = new Bubble(ctxB, getRandomInt123(0, canvasBubbles.width), getRandomInt123(0, canvasBubbles.height));
-
-      oneBubble[i].born();
-    }
-  }
 });
 
 $(document).ready(function(){

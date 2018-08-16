@@ -214,6 +214,7 @@ button{
 
 .services{
 	background-color: #272c46;
+	text-align: center;
 }
 
 #s_triangles{
@@ -368,6 +369,7 @@ button{
 }
 
 .order_button:hover{
+	cursor: pointer;
 	box-shadow: 0 0 20px 5px rgba(242, 208, 48, 0.5);
 }
 
@@ -747,14 +749,16 @@ button{
 	grid-row-start: 1;
 }
 
-.submit>input[type="text"]{
+.submit>textarea{
+	resize: none;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 5;
 	font-family: 'Open Sans';
 	padding-left: 10px;
 	padding-top: 10px;
-	padding-bottom: 150px;
+	margin: 0;
+	padding-right: 10px;
 }
 
 .submit>input[type="submit"]{
@@ -923,14 +927,14 @@ button{
 
 .icon_class{
 	position: relative;
-	height: 30px;
+	height: 0px;
 	margin-top: 0px;
 }
 
 .form_icon{
 	position: absolute;
 	font-size: 16px !important;
-	left: 2px;
+	left: 3px;
 	top: -22px;
 	color:#aaa;
 }
@@ -992,7 +996,8 @@ button{
 	right: 10px;
 }
 
-.submit>input[type="text"]:focus{
+.submit>textarea:
+resize: none;focus{
 	box-shadow: 0 0 15px #f2cc30;
 }
 
@@ -1149,7 +1154,50 @@ button{
    	grid-row-end: 7;	
 	justify-self: center;
 	}
-
+	@media(max-width: 399.9px){
+		
+		.services{
+		
+		grid-template-rows: 190px  repeat(5, 340px) 1fr;
+			min-height: 1900px;
+	}
+		.services1{
+	grid-column-start: 2;
+	grid-column-end: 5;
+   	grid-row-start: 2;
+   	grid-row-end: 3;	
+	justify-self: center;
+			
+	}
+		.services2{
+	grid-column-start: 2;
+	grid-column-end: 5;
+   	grid-row-start: 3;
+   	grid-row-end: 4;	
+	justify-self: center;
+	}
+		.services3{
+	grid-column-start: 2;
+	grid-column-end: 5;
+   	grid-row-start: 4;
+   	grid-row-end: 5;	
+	justify-self: center;
+	}
+		.services4{
+	grid-column-start: 1;
+	grid-column-end: 5;
+   	grid-row-start: 5;
+   	grid-row-end: 6;	
+	justify-self: center;
+	}
+		.services5{
+	grid-column-start: 1;
+	grid-column-end: 5;
+   	grid-row-start: 6;
+   	grid-row-end: 7;	
+	justify-self: center;
+	}
+	}
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 5;
@@ -1516,7 +1564,7 @@ button{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 190px repeat(5, 180px) 50px;
-		min-height: 1200px;
+		min-height: 1300px;
 		font-size: 13px;
 	}
 	
@@ -1529,8 +1577,8 @@ button{
 	
 	}
 	.services2{
-		grid-column-start: 8;
-		grid-column-end: 11;
+		grid-column-start: 9;
+		grid-column-end: 12;
    		grid-row-start: 3;
    		grid-row-end: 4;	
 		justify-self: center;
@@ -1543,8 +1591,8 @@ button{
 		justify-self: center;
 	}
 	.services4{
-		grid-column-start: 8;
-		grid-column-end: 11;
+		grid-column-start: 9;
+		grid-column-end: 12;
    		grid-row-start: 5;
    		grid-row-end: 6;	
 		justify-self: center;
