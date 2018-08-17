@@ -175,7 +175,7 @@ class Bubble{
         this.vx = -this.vx;
       }
 
-      if(this.y <= 0 || this.y >= canvasBubbles.height){
+      if(this.y <= 0 || this.y + this.size>= canvasBubbles.height){
         this.vy = -this.vy;
       }
 
@@ -275,10 +275,10 @@ function startCanvas(){
     ctxB.clearRect(0, 0, canvasBubbles.width, canvasBubbles.height);
 
     for(var i = 0; i<numBubble; i++){
-      oneBubble[i].draw();
-    }
+      if(oneBubble[i].y + oneBubble[i].size <= canvasBubbles.height){
+        oneBubble[i].draw();
+      }
 
-    for(var i = 0; i<numBubble; i++){
       oneBubble[i].move();
     }
 
