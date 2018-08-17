@@ -1143,7 +1143,6 @@ resize: none;focus{
     grid-column-end: 4; 
     grid-row-start: 1; 
     grid-row-end: 2; 
-    justify-self: center; 
     }
 	.services1{
 	grid-column-start: 2;
@@ -1199,6 +1198,13 @@ resize: none;focus{
           max-height: 130px;
           max-width: 130px;
         }
+     .services_head { 
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 2;
+    margin-top: 40px;
+    }
 		.services1{ 
     grid-column-start: 2; 
     grid-column-end: 3; 
@@ -1240,8 +1246,8 @@ resize: none;focus{
     width: 130px; 
     }
     .services_cat1 img, .services_cat2 img {
-          min-height: 130px;
-          min-width: 145px;
+          min-height: 120px;
+          min-width: 150px;
         }
     .services_cat1, .services_cat2 {
     grid-column-start: 3;
