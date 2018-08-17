@@ -7,12 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="img/icon32.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width">
+
+	<script src="js/jquery.maskedinput.min.js"></script>
 </head>
 
 <body>
@@ -62,19 +63,7 @@
 		<button class="item order_btn" onclick="location.href='#order'"><div class="button_child">ЗАКАЗАТЬ САЙТ</div></button>
 		<button class="item more" onclick="location.href='#about'"><div><p>Подробнее</p><img src="img/more.png"></div></button>
 		<div class="main_bg">
-			<div class="parallax-viewport" id="parallax">
-	        	        <!-- parallax layers -->
-		        <div class="parallax-layer">
-		            <div class="particles1"></div>
-		        </div>
-		        <div class="parallax-layer">
-		            <div class="particles2"></div>
-		        </div>
-		        <div class="parallax-layer">
-		         	<div class="particles3"></div>
-		        </div>
-	    	</div>
-
+			<canvas id="bubbles"></canvas>
 		</div>
 	</div>
 	<a id="about"></a>
@@ -226,6 +215,72 @@
 	</div>
 	<a id="testimonials"></a>
 	<div class="grid block testimonials">
+		<h1 class="testimonials_h"> ОТЗЫВЫ </h1>
+		<div class="TSLider">
+			<div class="testimonialsBlock slider" id="i2" withGrab="1">
+				<div class="containerSlider">
+					<div class="containerBlock" numActSlide = "3" haveSpecialCenterSlide = "1" switchWinSize="992" switchNumActSlide="1">
+						<div class="slider_block active">
+							<div class="in2slide">
+								<p>Удивительно! Восхитительно!</p>
+								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
+								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
+								<p>Иннокентий Бочкин, 27 лет</p>
+								<p>Писатель гей-фанфиков</p>
+							</div>
+						</div>
+	
+						<div class="slider_block">
+							<div class="in2slide">
+								<p>Удивительно! Восхитительно!</p>
+								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
+								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
+								<p>Иннокентий Бочкин, 27 лет</p>
+								<p>Писатель гей-фанфиков</p>
+							</div>
+						</div>
+	
+						<div class="slider_block">
+							<div class="in2slide">
+								<p>Удивительно! Восхитительно!</p>
+								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
+								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
+								<p>Иннокентий Бочкин, 27 лет</p>
+								<p>Писатель гей-фанфиков</p>
+							</div>
+						</div>
+
+						<div class="slider_block">
+							<div class="in2slide">
+								<p>Удивительно! Восхитительно!</p>
+								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
+								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
+								<p>Иннокентий Бочкин, 27 лет</p>
+								<p>Писатель гей-фанфиков</p>
+							</div>
+						</div>
+	
+						<div class="slider_block">
+							<div class="in2slide">
+								<p>Удивительно! Восхитительно!</p>
+								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
+								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
+								<p>Иннокентий Бочкин, 27 лет</p>
+								<p>Писатель гей-фанфиков</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sliderLeft">
+					<img src="img/slider1left.png">
+				</div>
+	
+				<div class="sliderRight">
+					<img src="img/slider1right.png">
+				</div>
+			</div>
+		</div>
 	</div>
 	<a id="order"></a>
 	<a id="footer"></a>
@@ -237,9 +292,9 @@
 		<div class="item copyright"><p>2018 © Все права защищены. Любое копирование только с разрешения и указания источника. www.livy.website</p></div>
 		<div class="item footer_contact">
 			<p>Свяжитесь с нами:</p>
-			<img src="img/tg.png">
-			<img src="img/vk.png">
-			<img src="img/mail.png">
+			<a href="https://t.me/kotovenc" target="_blank"><img src="img/tg.png"></a>
+			<a href="https://vk.com/livy_web" target="_blank"><img src="img/vk.png"></a>
+			<a href="mailto:galina.malygina00@gmail.com" target="_blank"><img src="img/mail.png"></a>
 			<p>8 (800) <b>555-35-35</b></p>
 		</div>
 		
@@ -250,21 +305,23 @@
 		<div class="form1_container">
 			<form class="form_grid submit">
 				<div class="name_input">
-					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<input class="form_input" id="name1" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="email_input">
-					<input class="form_input" type="email" name="mail" placeholder="Ваша почта" autocomplete="off">
+					<input class="form_input" id="email" type="email" name="email" placeholder="Ваша почта" autocomplete="off">
 					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="form1_select">
 					<select name="type">
 						<option value="Landing page">Landing page</option>
+						<option value="Landing page">Ellen Page</option>
+						<option value="Landing page">David Cage</option>
 					</select>
 					<div class="icon_class"><div class="fas fa-angle-down" aria-hidden="true"></div></div>
 				</div>
-				<input type="text" name="text" placeholder="Текст" autocomplete="off">
-				<input type="submit" name="submit" class="order_button" value="ОСТАВИТЬ ЗАЯВКУ">
+				<textarea type="texta" name="text" placeholder="Текст" autocomplete="off"></textarea>
+				<input type="submit" name="submit" class="order_button" id="submit1" value="ОСТАВИТЬ ЗАЯВКУ">
 			</form>
 		</div>
 		<div class="close_bar" id="close1">
@@ -278,14 +335,14 @@
 		<div class="form2_container">
 			<form class="form_grid submit2">
 				<div class="name_input">
-					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<input class="form_input" id="name2" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="email_input">
-					<input class="form_input" type="phone" name="phone" placeholder="Ваш номер" autocomplete="off">
-					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+					<input class="form_input" id="phone" type="phone" name="phone" placeholder="Ваш номер" autocomplete="off">
+					<div class="icon_class"><div class="fas fa-phone form_icon" aria-hidden="true"></div></div>
 				</div>
-				<input type="submit" name="submit" class="order_button" value="ЗАКАЗАТЬ ЗВОНОК">
+				<input type="submit" name="submit" class="order_button" id="submit2" value="ЗАКАЗАТЬ ЗВОНОК">
 			</form>
 		</div>
 		<div class="close_bar" id="close2">
@@ -295,8 +352,9 @@
 
 	<div class="space_img">
 		<div class="black_grad">		
-			<canvas id="particles"></canvas>	
+			<canvas id="stars"></canvas>	
 		</div>
+		<div class="spacecat"><img src="img/spacecat.png"></div>
 	</div>
 	<!--div class="large-grid">
 		<div class="column"></div>
@@ -316,20 +374,11 @@
 		<div class="column"></div>
 		<div class="column"></div>
 	</div-->
-	 <script src="js/jquery.parallax.js"></script>
-	  <script>
-  jQuery(document).ready(function(){
-    jQuery('#parallax .parallax-layer')
-    .parallax({
-      mouseport: jQuery('#parallax')
-    });
-  });
-  </script>
-  	<script src="js/menu.js"></script>
-  	<script src="js/portfolio.js"></script>
-  	<script src="js/footer.js"></script>
-  	<script src="js/LivYScripts.js"></script>
-  	<script src="js/LivYParticles.js"></script>
+  	<script src="https://livy.website/js/menu.js"></script>
+  	<script src="https://livy.website/js/portfolio.js"></script>
+  	<script src="https://livy.website/js/footer.js"></script>
+  	<script src="https://livy.website/js/LivYScripts.js"></script>
+  	<script src="https://livy.website/js/LivYParticles.js"></script>
 </body>
 
 </html>
