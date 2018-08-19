@@ -175,7 +175,7 @@ class Bubble{
         this.vx = -this.vx;
       }
 
-      if(this.y <= 0 || this.y + this.size>= canvasBubbles.height){
+      if(this.y <= 0 || this.y + this.size + 4 >= canvasBubbles.height){
         this.vy = -this.vy;
       }
 
@@ -255,7 +255,7 @@ function startCanvas(){
   numBubble = parseInt((canvasBubbles.width*canvasBubbles.height)/10000);
 
   for(var i = 0; i< numBubble; i++){
-    oneBubble[i] = new Bubble(ctxB, getRandomInt123(0, canvasBubbles.width), getRandomInt123(0, canvasBubbles.height));
+    oneBubble[i] = new Bubble(ctxB, getRandomInt123(0, canvasBubbles.width - 34), getRandomInt123(0, canvasBubbles.height - 34));
 
     oneBubble[i].draw();
 
