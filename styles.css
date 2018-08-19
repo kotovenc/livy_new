@@ -176,7 +176,7 @@ button{
 
 .about{
 	background: radial-gradient(ellipse, #272c46, black);
-	grid-template-rows: 10% 5% 20% 15% 20% 20% 10%;
+	grid-template-rows: 10% 5% 20% 15% 15% 15% 5% 10% 5%;
 	font-size: 15px;
 }
 
@@ -1467,8 +1467,25 @@ button{
 	.about_text{
 		grid-column-start: 1;
 	  	grid-column-end: 5;
-	  	grid-row-start: 4;
-	  	font-size: 12px;
+	  	grid-row-start: 3;
+
+	}
+	.about_under{
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 6;
+	  	grid-row-end: 6;
+	}
+
+	.about_cat{
+		grid-column-start: 2;
+	  	grid-column-end: 2;
+	  	grid-row-start: 8;
+	  	grid-row-end: 8;
+	}
+
+	.about_cat>img{
+		width: 200px;
 	}
 
 	.grid{
@@ -1805,17 +1822,21 @@ button{
 	}
 
 	.about_under{
-		grid-column-start: 8;
+		grid-column-start: 3;
 	  	grid-column-end: 13;
-	  	grid-row-start: 4;
+	  	grid-row-start: 6;
 	  	grid-row-end: 6;
 	}
 
 	.about_cat{
 		grid-column-start: 3;
 	  	grid-column-end: 7;
-	  	grid-row-start: 5;
-	  	grid-row-end: 6;
+	  	grid-row-start: 8;
+	  	grid-row-end: 8;
+	}
+
+	.about_cat>img{
+		width: 250px;	
 	}
 
 	.grid{
@@ -2147,6 +2168,11 @@ button{
 	  	grid-column-end: 10;
 	  	grid-row-start: 6;
 	}
+
+	.about_cat>img{
+		width: 300px;	
+	}
+
 
 	.grid{
 		grid-template-columns: 24px repeat(12, 1fr) 24px;
