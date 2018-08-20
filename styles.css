@@ -1213,7 +1213,7 @@ resize: none;focus{
 		text-align: right;
 	}
     .services_cat1, .services_cat2{
-    bottom: -15px;
+    bottom: -65px;
 	grid-column-start: 4;
 	grid-column-end: 5;
    	grid-row-start: 7;
@@ -1659,7 +1659,7 @@ resize: none;focus{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 190px repeat(5, 160px) 200px;
-		min-height: 1250px;
+		min-height: 1200px;
 		font-size: 13px;
 	}
 	
@@ -2346,8 +2346,8 @@ resize: none;focus{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 190px 160px 0px 160px  200px;	
-        min-height: 760px;
-        max-height: 760px;
+        min-height: 710px;
+        max-height: 710px;
 	}
      .services_head {
         grid-column-start: 2;
