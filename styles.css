@@ -232,10 +232,9 @@ button{
 .line{
 	position: absolute;
 	width: auto;
-	z-index: 9;
+	z-index: 1;
 	transform-origin: left ;
-	top: 75px;
-	left: 75px;
+	
 }
 .services_cat1 {
     z-index: 1;
@@ -1150,55 +1149,68 @@ resize: none;focus{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px  repeat(5, 170px) 200px;
+		grid-template-rows: 190px  repeat(5, 160px) 200px;
 		min-height: 1250px;
         font-size: 12px;
 	}
-    .services img {
-        height: 140px;
-        width: 140px;
-    }
+    
 
 	 .services_head { 
-    grid-column-start: 3; 
-    grid-column-end: 4; 
+    grid-column-start: 1; 
+    grid-column-end: 8; 
     grid-row-start: 1; 
-    grid-row-end: 2; 
+    grid-row-end: 2;
+	
     }
 	.services1{
-	grid-column-start: 2;
-	grid-column-end: 3;
+	grid-column-start: 3;
+	grid-column-end: 4;
    	grid-row-start: 2;
    	grid-row-end: 3;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: right;
 	}
 	.services2{
-	grid-column-start: 4;
-	grid-column-end: 5;
+	grid-column-start: 5;
+	grid-column-end: 6;
    	grid-row-start: 3;
    	grid-row-end: 4;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: left;
 	}
 	.services3{
-	grid-column-start: 2;
-	grid-column-end: 3;
+	grid-column-start: 3;
+	grid-column-end: 4;
    	grid-row-start: 4;
    	grid-row-end: 5;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: right;
 	}
 	.services4{
-	grid-column-start: 4;
-	grid-column-end: 5;
+	grid-column-start: 5;
+	grid-column-end: 6;
    	grid-row-start: 5;
    	grid-row-end: 6;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: left;
 	}
 	.services5{
-	grid-column-start: 2;
-	grid-column-end: 3;
+	grid-column-start: 3;
+	grid-column-end: 4;
    	grid-row-start: 6;
    	grid-row-end: 7;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: right;
 	}
     .services_cat1, .services_cat2{
     bottom: -15px;
@@ -1227,8 +1239,8 @@ resize: none;focus{
     margin-top: 40px;
     }
 		.services1{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
+    grid-column-start: 3; 
+    grid-column-end: 4; 
     grid-row-start: 2; 
     grid-row-end: 3; 
     justify-self: center; 
@@ -1602,7 +1614,7 @@ resize: none;focus{
 	}
 
 	.grid{
-		grid-template-columns: 15px 1fr 30px 1fr 15px;
+		grid-template-columns: 15px 1fr 1fr 30px 1fr 1fr 15px;
 	}
 
 	.large-grid{
@@ -1635,6 +1647,7 @@ resize: none;focus{
 }
 
 @media(min-width: 576px) and (max-width: 767.9px){
+
 	
 	.services_head {
         grid-column-start: 1;
@@ -1645,8 +1658,8 @@ resize: none;focus{
     }
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px repeat(5, 180px) 200px;
-		min-height: 1300px;
+		grid-template-rows: 190px repeat(5, 160px) 200px;
+		min-height: 1250px;
 		font-size: 13px;
 	}
 	
@@ -1656,14 +1669,17 @@ resize: none;focus{
    		grid-row-start: 2;
    		grid-row-end: 3;	
 		justify-self: center;
-	
+		position: relative;
+		width: 160px;
 	}
 	.services2{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
    		grid-row-start: 3;
    		grid-row-end: 4;	
 		justify-self: center;
+		position: relative;
+		width: 160px;
 	}
 	.services3{
 		grid-column-start: 4;
@@ -1671,13 +1687,15 @@ resize: none;focus{
    		grid-row-start: 4;
    		grid-row-end: 5;	
 		justify-self: center;
+		position: relative;
 	}
 	.services4{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
    		grid-row-start: 5;
    		grid-row-end: 6;	
 		justify-self: center;
+		position: relative;
 	}
 	.services5{
 		grid-column-start: 4;
@@ -1685,6 +1703,7 @@ resize: none;focus{
    		grid-row-start: 6;
    		grid-row-end: 7;	
 		justify-self: center;
+		position: relative;
 	}
     .services_cat1, .services_cat2{
         bottom: -15px;
@@ -1996,41 +2015,41 @@ resize: none;focus{
 	}
 	
 	.services1{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 2;
 	   	grid-row-end: 3;	
-		justify-self: center;
+		
 		position: relative;
 	}
 
 	.services2{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
 	   	grid-row-start: 3;
 	   	grid-row-end: 4;	
 		justify-self: center;
 		position: relative;
 	}
 	.services3{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 4;
 	   	grid-row-end: 5;	
 		justify-self: center;
 		position: relative;
 	}
 	.services4{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
  	  	grid-row-start: 5;
 	   	grid-row-end: 6;	
 		justify-self: center;
 		position: relative;
 	}
 	.services5{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 6;
 	   	grid-row-end: 7;	
 		justify-self: center;
@@ -2326,7 +2345,7 @@ resize: none;focus{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px 160px 0px 210px  200px;	
+		grid-template-rows: 190px 160px 0px 160px  200px;	
         min-height: 760px;
         max-height: 760px;
 	}
@@ -2357,6 +2376,18 @@ resize: none;focus{
 			1fr;	
 		}
 	}
+	@media (max-height: 459px)
+	{
+		.services{
+		grid-template-rows: 
+			180px 
+			0px 
+			160px
+			0px 
+			1fr;	
+		}
+	}
+	
 	.services1{
 		grid-column-start: 3;
 		grid-column-end: 5;
@@ -2364,6 +2395,7 @@ resize: none;focus{
    		grid-row-end: 4;	
 		justify-self:center;
 		position: relative;
+		z-index: 1;
 	}
 
 	.services2{
@@ -2373,6 +2405,7 @@ resize: none;focus{
    		grid-row-end: 5;	
 		justify-self:center;
 		position: relative;
+		z-index: 1;
 	}
 	
 		.services3{
@@ -2382,6 +2415,8 @@ resize: none;focus{
    		grid-row-end: 4;	
 		justify-self:center;
 		position: relative;
+			z-index: 1;
+			
 	}	
 	.services4{
 		grid-column-start: 9;
@@ -2649,8 +2684,8 @@ resize: none;focus{
 @media(min-width: 1200px){
 	 .services{
 		background-color: #272c46;
-		grid-template-rows: 180px 160px 0px 210px  1fr;	
-		min-height: 500px;
+		grid-template-rows: 180px 160px 0px 160px  1fr;	
+		min-height: 720px;
 	}
     
     .services_head {
@@ -2673,7 +2708,19 @@ resize: none;focus{
 			1fr;	
 		}
 	}
+	@media (max-height: 459px)
+	{
+		.services{
+		grid-template-rows: 
+			180px 
+			0px 
+			160px
+			0px 
+			1fr;	
+		}
+	}
 	
+
 	.services1{
 	grid-column-start: 3;
 	grid-column-end: 5;
@@ -3135,3 +3182,4 @@ ul {
 	display: block;
 	background-color: #272c46;
 }
+
