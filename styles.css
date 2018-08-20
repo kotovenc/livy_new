@@ -1138,6 +1138,7 @@ resize: none;focus{
         height: 140px;
         width: 140px;
     }
+
 	 .services_head { 
     grid-column-start: 3; 
     grid-column-end: 4; 
@@ -1252,6 +1253,7 @@ resize: none;focus{
     .services_cat1, .services_cat2 {
     bottom: 1px;
     grid-column-start: 3;
+
 	grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;
