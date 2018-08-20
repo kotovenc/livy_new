@@ -1222,7 +1222,7 @@ resize: none;focus{
     
 	@media(max-width: 399.9px){
 		
-		.services{
+			.services{
 		grid-template-rows: 190px  repeat(5, 130px) 1fr;
         min-height: 1040px;
         font-size: 11px;
@@ -1285,8 +1285,7 @@ resize: none;focus{
     .services_cat1, .services_cat2 {
     bottom: 1px;
     grid-column-start: 3;
-
-	grid-column-end: 5;
+ grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;
     }
@@ -1614,7 +1613,7 @@ resize: none;focus{
 	}
 
 	.grid{
-		grid-template-columns: 15px 1fr 1fr 30px 1fr 1fr 15px;
+		grid-template-columns: 15px 1fr 30px 1fr 15px;
 	}
 
 	.large-grid{
@@ -1647,7 +1646,6 @@ resize: none;focus{
 }
 
 @media(min-width: 576px) and (max-width: 767.9px){
-
 	
 	.services_head {
         grid-column-start: 1;
@@ -2062,6 +2060,7 @@ resize: none;focus{
 	   	grid-row-start: 7;
 	   	grid-row-end: 8;	
 	}
+
 
 	.form1>h1{
 		grid-column-start: 2;
@@ -2682,7 +2681,7 @@ resize: none;focus{
 }
 
 @media(min-width: 1200px){
-	 .services{
+	  .services{
 		background-color: #272c46;
 		grid-template-rows: 180px 160px 0px 160px  1fr;	
 		min-height: 720px;
@@ -3182,4 +3181,3 @@ ul {
 	display: block;
 	background-color: #272c46;
 }
-
