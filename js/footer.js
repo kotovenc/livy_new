@@ -13,3 +13,46 @@ $('#order2').click(function(){
 $('#close2').click(function(){
     $(".form2").animate({right: '-100%'},700);
 });
+
+$("#phone").mask("+9(999) 999-99-99");
+
+$(document).ready(function () {
+	$('#submit1').click(function (e) {
+	    var isValid = true;
+	    $('#name1,#email').each(function () {
+	    	if ($.trim($(this).val()) == '') {
+	            isValid = false;
+	            $(this).css({
+	                "background": "#FFCECE"
+	            });
+	        }
+	        else {
+	            $(this).css({
+	                "border": "",
+	                "background": ""
+	            });
+	        }
+	    });
+	    if (isValid == false)
+	        e.preventDefault();
+    });
+    $('#submit2').click(function (e) {
+	    var isValid = true;
+	    $('#name2,#phone').each(function () {
+	    	if ($.trim($(this).val()) == '') {
+	            isValid = false;
+	            $(this).css({
+	                "background": "#FFCECE"
+	            });
+	        }
+	        else {
+	            $(this).css({
+	                "border": "",
+	                "background": ""
+	            });
+	        }
+	    });
+	    if (isValid == false)
+	        e.preventDefault();
+    });
+});

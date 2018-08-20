@@ -217,6 +217,26 @@ button{
 	text-align: center;
 }
 
+#line1{
+	transform: rotate(0.699rad);
+}
+#line2{
+	transform: rotate(-0.699rad);
+}
+#line3{
+	transform: rotate(0.699rad);
+}
+#line4{
+	transform: rotate(-0.699rad);
+}
+.line{
+	position: absolute;
+	width: auto;
+	z-index: 9;
+	transform-origin: left ;
+	top: 75px;
+	left: 75px;
+}
 .services_cat1 {
     z-index: 1;
     position: absolute;
@@ -338,11 +358,18 @@ button{
 	/*background: radial-gradient(ellipse, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1));*/
 }
 
-#particles{
+#stars{
   width: 100%;
   height: 100%;
 
   filter: blur(0px);
+}
+
+#bubbles{
+  width: 100%;
+  height: 100%;
+
+  filter: blur(4px);
 }
 
 .item{
@@ -388,6 +415,7 @@ button{
 }
 
 .order_button:hover{
+	cursor: pointer;
 	box-shadow: 0 0 20px 5px rgba(242, 208, 48, 0.5);
 }
 
@@ -767,14 +795,16 @@ button{
 	grid-row-start: 1;
 }
 
-.submit>input[type="text"]{
+.submit>textarea{
+	resize: none;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	grid-row-start: 5;
 	font-family: 'Open Sans';
 	padding-left: 10px;
 	padding-top: 10px;
-	padding-bottom: 150px;
+	margin: 0;
+	padding-right: 10px;
 }
 
 .submit>input[type="submit"]{
@@ -943,14 +973,14 @@ button{
 
 .icon_class{
 	position: relative;
-	height: 30px;
+	height: 0px;
 	margin-top: 0px;
 }
 
 .form_icon{
 	position: absolute;
 	font-size: 16px !important;
-	left: 2px;
+	left: 3px;
 	top: -22px;
 	color:#aaa;
 }
@@ -1012,7 +1042,8 @@ button{
 	right: 10px;
 }
 
-.submit>input[type="text"]:focus{
+.submit>textarea:
+resize: none;focus{
 	box-shadow: 0 0 15px #f2cc30;
 }
 
@@ -1127,12 +1158,12 @@ button{
         height: 140px;
         width: 140px;
     }
-	 .services_head {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        justify-self: center;
+
+	 .services_head { 
+    grid-column-start: 3; 
+    grid-column-end: 4; 
+    grid-row-start: 1; 
+    grid-row-end: 2; 
     }
 	.services1{
 	grid-column-start: 2;
@@ -1169,80 +1200,85 @@ button{
    	grid-row-end: 7;	
 	justify-self: center;
 	}
-    .services_cat1{
+    .services_cat1, .services_cat2{
     bottom: -15px;
 	grid-column-start: 4;
 	grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;	
 	}
-    .services_cat2{
-    bottom: -15px;
-	grid-column-start: 4;
-	grid-column-end: 5;
-   	grid-row-start: 7;
-   	grid-row-end: 8;	
-	}
-    
     
 	@media(max-width: 399.9px){
 		
 		.services{
-		
-		grid-template-rows: 190px  repeat(5, 340px) 200px;
-			min-height: 2050px;
+		grid-template-rows: 190px  repeat(5, 130px) 1fr;
+        min-height: 1040px;
+        font-size: 11px;
 	}
-		.services1{
-	grid-column-start: 2;
-	grid-column-end: 5;
-   	grid-row-start: 2;
-   	grid-row-end: 3;	
-	justify-self: center;
-			
-	}
-		.services2{
-	grid-column-start: 2;
-	grid-column-end: 5;
-   	grid-row-start: 3;
-   	grid-row-end: 4;	
-	justify-self: center;
-	}
-		.services3{
-	grid-column-start: 2;
-	grid-column-end: 5;
-   	grid-row-start: 4;
-   	grid-row-end: 5;	
-	justify-self: center;
-	}
-		.services4{
-	grid-column-start: 1;
-	grid-column-end: 5;
-   	grid-row-start: 5;
-   	grid-row-end: 6;	
-	justify-self: center;
-	}
-		.services5{
-	grid-column-start: 1;
-	grid-column-end: 5;
-   	grid-row-start: 6;
-   	grid-row-end: 7;	
-	justify-self: center;
-	}
-        
-        .services_cat1 {
-    bottom: 35px;
-    grid-column-start: 1;
+        .services img {
+          max-height: 130px;
+          max-width: 130px;
+        }
+     .services_head { 
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    grid-row-start: 1; 
+    grid-row-end: 2;
+    margin-top: 40px;
+    }
+		.services1{ 
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 2; 
+    grid-row-end: 3; 
+    justify-self: center; 
+    width: 130px; 
+    } 
+    .services2{ 
+    grid-column-start: 4; 
+    grid-column-end: 5; 
+    grid-row-start: 3; 
+    grid-row-end: 4; 
+    justify-self: center; 
+    width: 130px; 
+    } 
+    .services3{ 
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 4; 
+    grid-row-end: 5; 
+    justify-self: center; 
+    width: 130px; 
+    } 
+    .services4{ 
+    grid-column-start: 4; 
+    grid-column-end: 5; 
+    grid-row-start: 5; 
+    grid-row-end: 6; 
+    justify-self: center; 
+    width: 130px; 
+    } 
+    .services5{ 
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 6; 
+    grid-row-end: 7; 
+    justify-self: center; 
+    width: 130px; 
+    }
+    .services_cat1 img, .services_cat2 img {
+          min-height: 120px;
+          min-width: 150px;
+        }
+    .services_cat1, .services_cat2 {
+    bottom: 1px;
+    grid-column-start: 3;
+
 	grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;
     }
-         .services_cat2 {
-    bottom: 35px;
-    grid-column-start: 1;
-	grid-column-end: 5;
-   	grid-row-start: 7;
-   	grid-row-end: 8;	
-    }
+        
 	}
 	.form1>h1{
 		grid-column-start: 2;
@@ -1650,20 +1686,14 @@ button{
    		grid-row-end: 7;	
 		justify-self: center;
 	}
-    .services_cat1{
+    .services_cat1, .services_cat2{
         bottom: -15px;
         grid-column-start: 9;
 		grid-column-end: 12;
    		grid-row-start: 7;
    		grid-row-end: 8;	
     }
-    .services_cat2{
-        bottom: -15px;
-        grid-column-start: 9;
-		grid-column-end: 12;
-   		grid-row-start: 7;
-   		grid-row-end: 8;	
-    }
+
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -1971,6 +2001,7 @@ button{
 	   	grid-row-start: 2;
 	   	grid-row-end: 3;	
 		justify-self: center;
+		position: relative;
 	}
 
 	.services2{
@@ -1979,6 +2010,7 @@ button{
 	   	grid-row-start: 3;
 	   	grid-row-end: 4;	
 		justify-self: center;
+		position: relative;
 	}
 	.services3{
 		grid-column-start: 4;
@@ -1986,6 +2018,7 @@ button{
 	   	grid-row-start: 4;
 	   	grid-row-end: 5;	
 		justify-self: center;
+		position: relative;
 	}
 	.services4{
 		grid-column-start: 9;
@@ -1993,6 +2026,7 @@ button{
  	  	grid-row-start: 5;
 	   	grid-row-end: 6;	
 		justify-self: center;
+		position: relative;
 	}
 	.services5{
 		grid-column-start: 4;
@@ -2000,6 +2034,7 @@ button{
 	   	grid-row-start: 6;
 	   	grid-row-end: 7;	
 		justify-self: center;
+		position: relative;
 	}
     .services_cat1, .services_cat2{
         bottom: -15px;
@@ -2008,7 +2043,6 @@ button{
 	   	grid-row-start: 7;
 	   	grid-row-end: 8;	
 	}
-    
 
 	.form1>h1{
 		grid-column-start: 2;
@@ -2312,49 +2346,58 @@ button{
         justify-self: center;
     }
 
-	@media (max-height: 700px)
+	@media (max-height: 620px)
 	{
 		.services{
-		grid-template-rows: 190px calc(100vh - 470px) 0px 210px  200px;	
-        min-height: calc(100vh + 130px);
+		grid-template-rows: 
+			180px 
+			calc(100vh - 459px) 
+			calc(160px - (100vh - 459px))
+			calc(100vh - 459px) 
+			1fr;	
 		}
 	}
 	.services1{
 		grid-column-start: 3;
 		grid-column-end: 5;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
 	}
 
 	.services2{
 		grid-column-start: 5;
 		grid-column-end: 7;
    		grid-row-start: 3;
-   		grid-row-end: 4;	
+   		grid-row-end: 5;	
 		justify-self:center;
+		position: relative;
 	}
 	
 		.services3{
 		grid-column-start: 7;
 		grid-column-end: 9;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
 	}	
 	.services4{
 		grid-column-start: 9;
 		grid-column-end: 11;
    		grid-row-start: 3;
-   		grid-row-end: 4;	
+   		grid-row-end: 5;	
 		justify-self:center;
+		position: relative;
 	}
 	.services5{
 		grid-column-start: 11;
 		grid-column-end: 13;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
 	}
     .services_cat1, .services_cat2{
 		grid-column-start: 7;
@@ -2362,7 +2405,6 @@ button{
    		grid-row-start: 5;
    		grid-row-end: 6;	
 	}	
-
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -2607,7 +2649,7 @@ button{
 @media(min-width: 1200px){
 	 .services{
 		background-color: #272c46;
-		grid-template-rows: 1fr 160px 0px 210px  1fr;	
+		grid-template-rows: 180px 160px 0px 210px  1fr;	
 		min-height: 500px;
 	}
     
@@ -2623,7 +2665,12 @@ button{
 	@media (max-height: 620px)
 	{
 		.services{
-		grid-template-rows: 80px calc(100vh - 470px) 0px 210px  1fr;	
+		grid-template-rows: 
+			180px 
+			calc(100vh - 459px) 
+			calc(160px - (100vh - 459px))
+			calc(100vh - 459px) 
+			1fr;	
 		}
 	}
 	
@@ -2631,44 +2678,48 @@ button{
 	grid-column-start: 3;
 	grid-column-end: 5;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		
-		width: 160px;
-}
+	width: 160px;
+	position: relative;	
+	}
 
 	.services2{
 	grid-column-start: 5;
 	grid-column-end: 7;
    	grid-row-start: 3;
-   	grid-row-end: 4;	
+  	grid-row-end: 5;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;
 		
 }
 	.services3{
 	grid-column-start: 7;
 	grid-column-end: 9;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;
 }
 	.services4{
 	grid-column-start: 9;
 	grid-column-end: 11;
    	grid-row-start: 3;
-   	grid-row-end: 4;	
+   	grid-row-end: 5;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;	
 }
 	.services5{
 	grid-column-start: 11;
 	grid-column-end: 13;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;	
 }
     .services_cat1, .services_cat2{
 	grid-column-start: 7;
