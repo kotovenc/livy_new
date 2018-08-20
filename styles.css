@@ -1190,7 +1190,7 @@ resize: none;focus{
 	@media(max-width: 399.9px){
 		
 		.services{
-		grid-template-rows: 190px  repeat(5, 130px) 185px;
+		grid-template-rows: 190px  repeat(5, 130px) 1fr;
         min-height: 1040px;
         font-size: 11px;
 	}
@@ -1250,6 +1250,7 @@ resize: none;focus{
           min-width: 150px;
         }
     .services_cat1, .services_cat2 {
+    bottom: 1px;
     grid-column-start: 3;
 	grid-column-end: 5;
    	grid-row-start: 7;
