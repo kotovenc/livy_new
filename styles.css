@@ -232,9 +232,8 @@ button{
 .line{
 	position: absolute;
 	width: auto;
-	z-index: 1;
 	transform-origin: left ;
-	
+	z-index: -1;
 }
 .services_cat1 {
     z-index: 1;
@@ -243,7 +242,9 @@ button{
     justify-self: center;
     text-align: center;
 }
-
+.services_img{
+	z-index: 1;
+}
 .services_cat2{
     z-index: 0;
     position: absolute;
@@ -1213,82 +1214,82 @@ resize: none;focus{
 		text-align: right;
 	}
     .services_cat1, .services_cat2{
-    bottom: -65px;
+    bottom: -15px;
 	grid-column-start: 4;
 	grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;	
 	}
-    
-	@media(max-width: 399.9px){
-		
-			.services{
-		grid-template-rows: 190px  repeat(5, 130px) 1fr;
-        min-height: 1040px;
-        font-size: 11px;
-	}
-        .services img {
-          max-height: 130px;
-          max-width: 130px;
-        }
-     .services_head { 
-    grid-column-start: 1; 
-    grid-column-end: 5; 
-    grid-row-start: 1; 
-    grid-row-end: 2;
-    margin-top: 40px;
-    }
-		.services1{ 
-    grid-column-start: 3; 
-    grid-column-end: 4; 
-    grid-row-start: 2; 
-    grid-row-end: 3; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services2{ 
-    grid-column-start: 4; 
-    grid-column-end: 5; 
-    grid-row-start: 3; 
-    grid-row-end: 4; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services3{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
-    grid-row-start: 4; 
-    grid-row-end: 5; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services4{ 
-    grid-column-start: 4; 
-    grid-column-end: 5; 
-    grid-row-start: 5; 
-    grid-row-end: 6; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services5{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
-    grid-row-start: 6; 
-    grid-row-end: 7; 
-    justify-self: center; 
-    width: 130px; 
-    }
-    .services_cat1 img, .services_cat2 img {
-          min-height: 120px;
-          min-width: 150px;
-        }
-    .services_cat1, .services_cat2 {
-    bottom: 1px;
-    grid-column-start: 3;
- grid-column-end: 5;
-   	grid-row-start: 7;
-   	grid-row-end: 8;
-    }
+    @media(max-width: 399.9px){ 
+
+.services{ 
+grid-template-rows: 190px repeat(5, 130px) 1fr; 
+min-height: 1040px; 
+font-size: 11px; 
+} 
+.services img { 
+max-height: 130px; 
+max-width: 130px; 
+} 
+.services_head { 
+grid-column-start: 1; 
+grid-column-end: 5; 
+grid-row-start: 1; 
+grid-row-end: 2; 
+margin-top: 40px; 
+} 
+.services1{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 2; 
+grid-row-end: 3; 
+justify-self: center; 
+width: 130px; 
+} 
+.services2{ 
+grid-column-start: 4; 
+grid-column-end: 5; 
+grid-row-start: 3; 
+grid-row-end: 4; 
+justify-self: center; 
+width: 130px; 
+} 
+.services3{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 4; 
+grid-row-end: 5; 
+justify-self: center; 
+width: 130px; 
+} 
+.services4{ 
+grid-column-start: 4; 
+grid-column-end: 5; 
+grid-row-start: 5; 
+grid-row-end: 6; 
+justify-self: center; 
+width: 130px; 
+} 
+.services5{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 6; 
+grid-row-end: 7; 
+justify-self: center; 
+width: 130px; 
+} 
+.services_cat1 img, .services_cat2 img { 
+min-height: 120px; 
+min-width: 150px; 
+} 
+.services_cat1, .services_cat2 { 
+bottom: 1px; 
+grid-column-start: 3; 
+
+grid-column-end: 5; 
+grid-row-start: 7; 
+grid-row-end: 8; 
+}
         
 	}
 	.form1>h1{
@@ -1613,7 +1614,7 @@ resize: none;focus{
 	}
 
 	.grid{
-		grid-template-columns: 15px 1fr 30px 1fr 15px;
+		grid-template-columns: 15px 1fr 1fr 30px 1fr 1fr 15px;
 	}
 
 	.large-grid{
@@ -1646,6 +1647,7 @@ resize: none;focus{
 }
 
 @media(min-width: 576px) and (max-width: 767.9px){
+
 	
 	.services_head {
         grid-column-start: 1;
@@ -1657,7 +1659,7 @@ resize: none;focus{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 190px repeat(5, 160px) 200px;
-		min-height: 1200px;
+		min-height: 1250px;
 		font-size: 13px;
 	}
 	
@@ -2061,7 +2063,6 @@ resize: none;focus{
 	   	grid-row-end: 8;	
 	}
 
-
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -2345,8 +2346,8 @@ resize: none;focus{
 	.services{
 		background-color: #272c46;
 		grid-template-rows: 190px 160px 0px 160px  200px;	
-        min-height: 710px;
-        max-height: 710px;
+        min-height: 760px;
+        max-height: 760px;
 	}
      .services_head {
         grid-column-start: 2;
@@ -2681,7 +2682,7 @@ resize: none;focus{
 }
 
 @media(min-width: 1200px){
-	  .services{
+	 .services{
 		background-color: #272c46;
 		grid-template-rows: 180px 160px 0px 160px  1fr;	
 		min-height: 720px;
@@ -3181,3 +3182,4 @@ ul {
 	display: block;
 	background-color: #272c46;
 }
+
