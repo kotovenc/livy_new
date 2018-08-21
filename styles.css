@@ -1493,23 +1493,22 @@ button{
 	}
 	
 	.cat_bg{
-		-webkit-clip-path: polygon(275px 0, 275px 60px, 400px 300px, 0 300px, 0 0);
-		clip-path: polygon(275px 0, 400px 60px, 400px 300px, 0 300px, 0 0);
-		grid-column-start: 1;
-	  	grid-column-end: 1;
-	  	grid-row-start: 8;
-	  	grid-row-end: 9;
-	  	width: 400px;
-	  	top: 24px;
+    -webkit-clip-path: polygon(225px 0, 225px 60px, 350px 300px, 0 300px, 0 0);
+    clip-path: polygon(225px 0, 350px 60px, 350px 300px, 0 300px, 0 0);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    width: 350px;
+    top: 24px;
+    }
 
-	}
-
-	.cat_bg>div{
-		grid-column-start: 1;
-	  	grid-column-end: 1;
-	  	grid-row-start: 9;
-	  	width: 400px;
-	}
+    .cat_bg>div{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 9;
+    width: 350px;
+    }
 
 	.about_cat>img{
 		width: 200px;
