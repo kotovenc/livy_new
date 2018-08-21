@@ -217,6 +217,27 @@ button{
 	text-align: center;
 }
 
+#line1{
+	transform: rotate(0.699rad);
+}
+#line2{
+	transform: rotate(-0.699rad);
+}
+#line3{
+	transform: rotate(0.699rad);
+}
+#line4{
+	transform: rotate(-0.699rad);
+}
+.line{
+	position: absolute;
+	width: 200px;
+	height: 10px;
+	background: url(img/Line_long.png);
+		
+	transform-origin: left ;
+	z-index: -1;
+}
 .services_cat1 {
     z-index: 1;
     position: absolute;
@@ -224,7 +245,9 @@ button{
     justify-self: center;
     text-align: center;
 }
-
+.services_img{
+	z-index: 1;
+}
 .services_cat2{
     z-index: 0;
     position: absolute;
@@ -1130,27 +1153,33 @@ resize: none;focus{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px  repeat(5, 170px) 200px;
-		min-height: 1250px;
+		grid-template-rows: 190px  repeat(5, 160px) 200px;
+		min-height: 1190px;
         font-size: 12px;
+		
 	}
-    .services img {
-        height: 140px;
-        width: 140px;
-    }
-
+	
 	 .services_head { 
-    grid-column-start: 3; 
-    grid-column-end: 4; 
+    grid-column-start: 1; 
+    grid-column-end: 6; 
     grid-row-start: 1; 
-    grid-row-end: 2; 
+    grid-row-end: 2;
+	
     }
+	.line{
+		background: url(img/Line_long.png);
+		width: calc(100vw - 180px);
+		height: 10px;
+	}
 	.services1{
 	grid-column-start: 2;
 	grid-column-end: 3;
    	grid-row-start: 2;
    	grid-row-end: 3;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: center;
 	}
 	.services2{
 	grid-column-start: 4;
@@ -1158,6 +1187,9 @@ resize: none;focus{
    	grid-row-start: 3;
    	grid-row-end: 4;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: center;
 	}
 	.services3{
 	grid-column-start: 2;
@@ -1165,6 +1197,9 @@ resize: none;focus{
    	grid-row-start: 4;
    	grid-row-end: 5;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: center;
 	}
 	.services4{
 	grid-column-start: 4;
@@ -1172,6 +1207,9 @@ resize: none;focus{
    	grid-row-start: 5;
    	grid-row-end: 6;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: center;
 	}
 	.services5{
 	grid-column-start: 2;
@@ -1179,85 +1217,87 @@ resize: none;focus{
    	grid-row-start: 6;
    	grid-row-end: 7;	
 	justify-self: center;
+		position: relative;
+		 width: 160;
+		text-align: center;
 	}
     .services_cat1, .services_cat2{
-    bottom: -15px;
+ 
 	grid-column-start: 4;
 	grid-column-end: 5;
    	grid-row-start: 7;
    	grid-row-end: 8;	
 	}
-    
-	@media(max-width: 399.9px){
-		
-		.services{
-		grid-template-rows: 190px  repeat(5, 130px) 1fr;
-        min-height: 1040px;
-        font-size: 11px;
-	}
-        .services img {
-          max-height: 130px;
-          max-width: 130px;
-        }
-     .services_head { 
-    grid-column-start: 1; 
-    grid-column-end: 5; 
-    grid-row-start: 1; 
-    grid-row-end: 2;
-    margin-top: 40px;
-    }
-		.services1{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
-    grid-row-start: 2; 
-    grid-row-end: 3; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services2{ 
-    grid-column-start: 4; 
-    grid-column-end: 5; 
-    grid-row-start: 3; 
-    grid-row-end: 4; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services3{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
-    grid-row-start: 4; 
-    grid-row-end: 5; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services4{ 
-    grid-column-start: 4; 
-    grid-column-end: 5; 
-    grid-row-start: 5; 
-    grid-row-end: 6; 
-    justify-self: center; 
-    width: 130px; 
-    } 
-    .services5{ 
-    grid-column-start: 2; 
-    grid-column-end: 3; 
-    grid-row-start: 6; 
-    grid-row-end: 7; 
-    justify-self: center; 
-    width: 130px; 
-    }
-    .services_cat1 img, .services_cat2 img {
-          min-height: 120px;
-          min-width: 150px;
-        }
-    .services_cat1, .services_cat2 {
-    bottom: 1px;
-    grid-column-start: 3;
+    @media(max-width: 399.9px){ 
 
-	grid-column-end: 5;
-   	grid-row-start: 7;
-   	grid-row-end: 8;
-    }
+.services{ 
+grid-template-rows: 190px repeat(5, 130px) 1fr; 
+min-height: 1040px; 
+font-size: 11px; 
+} 
+.services img { 
+max-height: 130px; 
+max-width: 130px; 
+} 
+.services_head { 
+grid-column-start: 1; 
+grid-column-end: 5; 
+grid-row-start: 1; 
+grid-row-end: 2; 
+margin-top: 40px; 
+} 
+.services1{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 2; 
+grid-row-end: 3; 
+justify-self: center; 
+width: 130px; 
+} 
+.services2{ 
+grid-column-start: 4; 
+grid-column-end: 5; 
+grid-row-start: 3; 
+grid-row-end: 4; 
+justify-self: center; 
+width: 130px; 
+} 
+.services3{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 4; 
+grid-row-end: 5; 
+justify-self: center; 
+width: 130px; 
+} 
+.services4{ 
+grid-column-start: 4; 
+grid-column-end: 5; 
+grid-row-start: 5; 
+grid-row-end: 6; 
+justify-self: center; 
+width: 130px; 
+} 
+.services5{ 
+grid-column-start: 2; 
+grid-column-end: 3; 
+grid-row-start: 6; 
+grid-row-end: 7; 
+justify-self: center; 
+width: 130px; 
+} 
+.services_cat1 img, .services_cat2 img { 
+min-height: 120px; 
+min-width: 150px; 
+} 
+.services_cat1, .services_cat2 { 
+bottom: 1px; 
+grid-column-start: 3; 
+
+grid-column-end: 5; 
+grid-row-start: 7; 
+grid-row-end: 8; 
+}
         
 	}
 	.form1>h1{
@@ -1582,7 +1622,7 @@ resize: none;focus{
 	}
 
 	.grid{
-		grid-template-columns: 15px 1fr 30px 1fr 15px;
+		grid-template-columns: 15px  1fr 30px 1fr  15px;
 	}
 
 	.large-grid{
@@ -1616,6 +1656,7 @@ resize: none;focus{
 
 @media(min-width: 576px) and (max-width: 767.9px){
 	
+	
 	.services_head {
         grid-column-start: 1;
         grid-column-end: 14;
@@ -1625,8 +1666,8 @@ resize: none;focus{
     }
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px repeat(5, 180px) 200px;
-		min-height: 1300px;
+		grid-template-rows: 190px repeat(5, 160px) 200px;
+		min-height: 1200px;
 		font-size: 13px;
 	}
 	
@@ -1636,14 +1677,17 @@ resize: none;focus{
    		grid-row-start: 2;
    		grid-row-end: 3;	
 		justify-self: center;
-	
+		position: relative;
+		width: 160px;
 	}
 	.services2{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
    		grid-row-start: 3;
    		grid-row-end: 4;	
 		justify-self: center;
+		position: relative;
+		width: 160px;
 	}
 	.services3{
 		grid-column-start: 4;
@@ -1651,13 +1695,15 @@ resize: none;focus{
    		grid-row-start: 4;
    		grid-row-end: 5;	
 		justify-self: center;
+		position: relative;
 	}
 	.services4{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
    		grid-row-start: 5;
    		grid-row-end: 6;	
 		justify-self: center;
+		position: relative;
 	}
 	.services5{
 		grid-column-start: 4;
@@ -1665,11 +1711,12 @@ resize: none;focus{
    		grid-row-start: 6;
    		grid-row-end: 7;	
 		justify-self: center;
+		position: relative;
 	}
     .services_cat1, .services_cat2{
         bottom: -15px;
-        grid-column-start: 9;
-		grid-column-end: 12;
+        grid-column-start: 8;
+		grid-column-end: 11;
    		grid-row-start: 7;
    		grid-row-end: 8;	
     }
@@ -1976,40 +2023,45 @@ resize: none;focus{
 	}
 	
 	.services1{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 2;
 	   	grid-row-end: 3;	
-		justify-self: center;
+		
+		position: relative;
 	}
 
 	.services2{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
 	   	grid-row-start: 3;
 	   	grid-row-end: 4;	
 		justify-self: center;
+		position: relative;
 	}
 	.services3{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 4;
 	   	grid-row-end: 5;	
 		justify-self: center;
+		position: relative;
 	}
 	.services4{
-		grid-column-start: 9;
-		grid-column-end: 12;
+		grid-column-start: 8;
+		grid-column-end: 11;
  	  	grid-row-start: 5;
 	   	grid-row-end: 6;	
 		justify-self: center;
+		position: relative;
 	}
 	.services5{
-		grid-column-start: 4;
-		grid-column-end: 7;
+		grid-column-start: 5;
+		grid-column-end: 8;
 	   	grid-row-start: 6;
 	   	grid-row-end: 7;	
 		justify-self: center;
+		position: relative;
 	}
     .services_cat1, .services_cat2{
         bottom: -15px;
@@ -2018,6 +2070,7 @@ resize: none;focus{
 	   	grid-row-start: 7;
 	   	grid-row-end: 8;	
 	}
+
 
 	.form1>h1{
 		grid-column-start: 2;
@@ -2301,18 +2354,11 @@ resize: none;focus{
 	
 	.services{
 		background-color: #272c46;
-		grid-template-rows: 190px 160px 0px 210px  200px;	
-        min-height: 760px;
-        max-height: 760px;
+		grid-template-rows: 190px 160px 0px 160px  1fr;	
+        min-height: 720px;
+  
 	}
-     .services_head {
-        grid-column-start: 2;
-        grid-column-end: 14;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        justify-self: center;
-        align-self: center;
-    }
+  
     .services_head {
         grid-column-start: 1;
         grid-column-end: 14;
@@ -2321,49 +2367,76 @@ resize: none;focus{
         justify-self: center;
     }
 
-	@media (max-height: 700px)
+	@media (max-height: 620px)
 	{
 		.services{
-		grid-template-rows: 190px calc(100vh - 470px) 0px 210px  200px;	
-        min-height: calc(100vh + 130px);
+		grid-template-rows: 
+			180px 
+			calc(100vh - 459px) 
+			calc(160px - (100vh - 459px))
+			calc(100vh - 459px) 
+			1fr;	
 		}
 	}
+	@media (max-height: 459px)
+	{
+		.services{
+		grid-template-rows: 
+			180px 
+			0px 
+			160px
+			0px 
+			1fr;	
+		}
+	}
+	
 	.services1{
 		grid-column-start: 3;
 		grid-column-end: 5;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
+		z-index: 1;
 	}
 
 	.services2{
 		grid-column-start: 5;
 		grid-column-end: 7;
    		grid-row-start: 3;
-   		grid-row-end: 4;	
+   		grid-row-end: 5;	
 		justify-self:center;
+		position: relative;
+		z-index: 1;
 	}
 	
 		.services3{
 		grid-column-start: 7;
 		grid-column-end: 9;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
+			z-index: 1;
+			
 	}	
 	.services4{
 		grid-column-start: 9;
 		grid-column-end: 11;
    		grid-row-start: 3;
-   		grid-row-end: 4;	
+   		grid-row-end: 5;	
 		justify-self:center;
+		position: relative;
+		z-index:1;
 	}
 	.services5{
 		grid-column-start: 11;
 		grid-column-end: 13;
    		grid-row-start: 2;
-   		grid-row-end: 3;	
+   		grid-row-end: 4;	
 		justify-self:center;
+		position: relative;
+		z-index:1;
 	}
     .services_cat1, .services_cat2{
 		grid-column-start: 7;
@@ -2615,8 +2688,8 @@ resize: none;focus{
 @media(min-width: 1200px){
 	 .services{
 		background-color: #272c46;
-		grid-template-rows: 1fr 160px 0px 210px  1fr;	
-		min-height: 500px;
+		grid-template-rows: 180px 160px 0px 160px  1fr;	
+		min-height: 720px;
 	}
     
     .services_head {
@@ -2631,52 +2704,73 @@ resize: none;focus{
 	@media (max-height: 620px)
 	{
 		.services{
-		grid-template-rows: 80px calc(100vh - 470px) 0px 210px  1fr;	
+		grid-template-rows: 
+			180px 
+			calc(100vh - 459px) 
+			calc(160px - (100vh - 459px))
+			calc(100vh - 459px) 
+			1fr;	
+		}
+	}
+	@media (max-height: 459px)
+	{
+		.services{
+		grid-template-rows: 
+			180px 
+			0px 
+			160px
+			0px 
+			1fr;	
 		}
 	}
 	
+
 	.services1{
 	grid-column-start: 3;
 	grid-column-end: 5;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		
-		width: 160px;
-}
+	width: 160px;
+	position: relative;	
+	}
 
 	.services2{
 	grid-column-start: 5;
 	grid-column-end: 7;
    	grid-row-start: 3;
-   	grid-row-end: 4;	
+  	grid-row-end: 5;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;
 		
 }
 	.services3{
 	grid-column-start: 7;
 	grid-column-end: 9;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;
 }
 	.services4{
 	grid-column-start: 9;
 	grid-column-end: 11;
    	grid-row-start: 3;
-   	grid-row-end: 4;	
+   	grid-row-end: 5;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;	
 }
 	.services5{
 	grid-column-start: 11;
 	grid-column-end: 13;
    	grid-row-start: 2;
-   	grid-row-end: 3;	
+   	grid-row-end: 4;	
 	justify-self: center;
-		width: 160px;
+	width: 160px;
+	position: relative;	
 }
     .services_cat1, .services_cat2{
 	grid-column-start: 7;
@@ -2684,7 +2778,6 @@ resize: none;focus{
    	grid-row-start: 6;
    	grid-row-end: 7;
 }
-    
 	.form1>h1{
 		grid-column-start: 2;
 	  	grid-column-end: 14;
@@ -3091,4 +3184,7 @@ ul {
 	width: 150px;
 	display: block;
 	background-color: #272c46;
+}
+.serv_line {
+	
 }
