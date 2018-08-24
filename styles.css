@@ -176,7 +176,7 @@ button{
 
 .about{
 	background: radial-gradient(ellipse, #272c46, black);
-	grid-template-rows: 10% 5% 20% 15% 20% 20% 10%;
+	grid-template-rows: 10% 5% 20% 10% 20% 15% 5% 10% 5%;
 	font-size: 15px;
 }
 
@@ -194,12 +194,12 @@ button{
 }
 
 .cat_bg{
-	-webkit-clip-path: polygon(475px 0, 475px 60px, 600px 300px, 0 300px, 0 0);
-	clip-path: polygon(475px 0, 600px 60px, 600px 300px, 0 300px, 0 0);
-	clip-path: 
+	-webkit-clip-path: polygon(575px 0, 575px 60px, 700px 300px, 0 300px, 0 0);
+	clip-path: polygon(575px 0, 700px 60px, 700px 300px, 0 300px, 0 0);
+ 
 	z-index: 1;
-	position: relative;
-	width: 600px;
+	position: absolute;
+	width: 700px;
 	height: 90px;
 	background-color: #272c46;
 }
@@ -209,7 +209,7 @@ button{
 	bottom: 0;
 	background-color: #232534;
 	height: 30px;
-	width: 600px;
+	width: 700px;
 }
 
 .services{
@@ -1621,6 +1621,44 @@ grid-row-end: 8;
 	  	font-size: 12px;
 	}
 
+	.about_under{
+		grid-column-start: 2;
+	  	grid-column-end: 5;
+	  	grid-row-start: 6;
+	  	grid-row-end: 6;
+	  	font-size: 12px;
+	}
+
+	.about_cat{
+		grid-column-start: 2;
+	  	grid-column-end: 2;
+	  	grid-row-start: 8;
+	  	grid-row-end: 8;
+	  	bottom: 5px;
+	}
+	
+	.cat_bg{
+    -webkit-clip-path: polygon(225px 0, 225px 60px, 350px 300px, 0 300px, 0 0);
+    clip-path: polygon(225px 0, 350px 60px, 350px 300px, 0 300px, 0 0);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    width: 350px;
+    top: 44px;
+    }
+
+    .cat_bg>div{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 9;
+    width: 350px;
+    }
+
+	.about_cat>img{
+		width: 200px;
+	}
+
 	.grid{
 		grid-template-columns: 15px  1fr 30px 1fr  15px;
 	}
@@ -1969,17 +2007,42 @@ grid-row-end: 8;
 	}
 
 	.about_under{
-		grid-column-start: 8;
+		grid-column-start: 3;
 	  	grid-column-end: 13;
-	  	grid-row-start: 4;
+	  	grid-row-start: 6;
 	  	grid-row-end: 6;
 	}
 
 	.about_cat{
 		grid-column-start: 3;
 	  	grid-column-end: 7;
-	  	grid-row-start: 5;
-	  	grid-row-end: 6;
+	  	grid-row-start: 8;
+	  	grid-row-end: 8;
+		bottom: -1px;
+	}
+
+	.about_cat>img{
+		bottom: 20px;
+		width: 230px;	
+	}
+
+	.cat_bg{
+		-webkit-clip-path: polygon(275px 0, 275px 60px, 400px 300px, 0 300px, 0 0);
+		clip-path: polygon(275px 0, 400px 60px, 400px 300px, 0 300px, 0 0);
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 8;
+	  	grid-row-end: 9;
+	  	width: 400px;
+	  	top: 44px;
+
+	}
+
+	.cat_bg>div{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 9;
+	  	width: 400px;
 	}
 
 	.grid{
@@ -2323,6 +2386,31 @@ grid-row-end: 8;
 		grid-column-start: 2;
 	  	grid-column-end: 10;
 	  	grid-row-start: 6;
+	  	bottom: 40px;
+	}
+
+	.about_cat>img{
+
+		width: 300px;	
+	}
+
+	.cat_bg{
+		-webkit-clip-path: polygon(475px 0, 475px 60px, 600px 300px, 0 300px, 0 0);
+		clip-path: polygon(475px 0, 600px 60px, 600px 300px, 0 300px, 0 0);
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 8;
+	  	grid-row-end: 9;
+	  	width: 600px;
+	  	top: 44px;
+
+	}
+
+	.cat_bg>div{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 9;
+	  	width: 600px;
 	}
 
 	.grid{
@@ -2651,13 +2739,28 @@ grid-row-end: 8;
 	.about_under{
 		grid-column-start: 8;
 	  	grid-column-end: 13;
-	  	grid-row-start: 5;
+	  	grid-row-start: 6;
 	}
 
 	.about_cat{
-		grid-column-start: 2;
+		grid-column-start: 3;
 	  	grid-column-end: 7;
 	  	grid-row-start: 6;
+	}
+
+	.cat_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 8;
+	  	grid-row-end: 9;
+	  	top: 44px;
+
+	}
+
+	.cat_bg>div{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 9;
 	}
 
 	.grid{
@@ -3016,13 +3119,28 @@ grid-row-end: 8;
 	.about_under{
 		grid-column-start: 8;
 	  	grid-column-end: 13;
-	  	grid-row-start: 5;
+	  	grid-row-start: 6;
 	}
 
 	.about_cat{
-		grid-column-start: 2;
+		grid-column-start: 3;
 	  	grid-column-end: 7;
-	  	grid-row-start: 5;
+	  	grid-row-start: 6;
+	}
+
+	.cat_bg{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 8;
+	  	grid-row-end: 9;
+	  	top: 44px;
+
+	}
+
+	.cat_bg>div{
+		grid-column-start: 1;
+	  	grid-column-end: 1;
+	  	grid-row-start: 9;
 	}
 
 	.grid{
