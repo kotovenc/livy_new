@@ -129,56 +129,45 @@
 		</div>
 	</div>
 	<div class="item about_cat"><img src="img/cat_no_bg.png"></div>
-	<div class="item about_catext"></div>
-		<!--div class="cat_block">
-			<img class="about_cat" src="img/cat_no_bg.png">
-			<div class="cat_bg">
-				<div></div>
-			</div>
-		</div-->
+	<div class="cat_bg"></div>
+	<div class="cat_bg_down"></div>
+	
 	</div>
-	
-	
 	<a id="services"></a>
 	<div class="grid block services">
 		<div class="item services_head"><h1>услуги</h1></div>
 		
 		<div class="services1" id = "serv1">
-			<div class="line" id="line1"> 
-				<img alt="line" src="img/Line.png">
-			</div>
+			<div class="line" id="line1"> </div>
+			
 			<div class="services_img" >
-				<img alt="n" src="img/tz.png">
+				<img  alt="tz" src="img/tz.png">
 			</div>
-			<p><b>Техническое задание</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			
+			<div><p><b>Техническое задание</b></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p></div>
 		</div>
 		
 		<div class="services2" id = "serv2">
-			<div class="services_img"><img alt="n" src="img/design.png">
-				<div class="line" id="line2"> 
-					<img alt="line" src="img/Line.png">
-				</div>
+			<div class="services_img"><img alt="design" src="img/design.png">
+				<div class="line" id="line2"> </div>
 			</div>
-			<p><b>Создание дизайна</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			<div><p><b>Создание дизайна</b></p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p></div>
+			
 		</div>
 			
 		<div class="services3" id = "serv3">
-			<div class="services_img"><img alt="n" src="img/index.png">
-			<div class="line" id="line3"> 
-					<img alt="line3" src="img/Line.png">
-				</div>
+			<div class="services_img"><img alt="index" src="img/index.png">
+			<div class="line" id="line3"> </div>
 			</div>
 			<p><b>Разработка</b></p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
 		</div>
 			
 		<div class="services4" id = "serv4">
-			<div class="services_img"><img alt="n" src="img/site.png">
-				<div class="line" id="line4"> 
-					<img alt="line" src="img/Line.png">
-				</div>
+			<div class="services_img"><img alt="site" src="img/site.png">
+				<div class="line" id="line4"> </div>
 			</div>
 			<p><b>Запуск сайта</b></p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
@@ -186,7 +175,6 @@
 		
 		<div class="services5" id = "serv5">
 			<div class="services_img"><img alt="n" src="img/5.png">
-				
 			</div>
 			<p><b>Поддержка сайта</b></p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
@@ -194,7 +182,6 @@
 		<div class="services_cat1"><img src="img/cat_serv1.png" alt=""></div>
 		<div class="services_cat2"><img src="img/cat_serv2.png" alt=""></div>
 		<div id="s_triangles"></div>
-		<script src="script.js"></script>
 	</div>
 	
 	
@@ -324,7 +311,7 @@
 		<div class="form1_bg"></div>
 		<h1>Оставить заявку</h1>
 		<div class="form1_container">
-			<form class="form_grid submit">
+			<form action="backend/form1.php" method="POST" class="form_grid submit">
 				<div class="name_input">
 					<input class="form_input" id="name1" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
@@ -354,7 +341,7 @@
 		<div class="form2_bg"></div>
 		<h1>Заказать звонок</h1>
 		<div class="form2_container">
-			<form class="form_grid submit2">
+			<form action="backend/form1.php" method="POST" class="form_grid submit2">
 				<div class="name_input">
 					<input class="form_input" id="name2" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
@@ -395,13 +382,13 @@
 		<div class="column"></div>
 		<div class="column"></div>
 	</div-->
-  	<script src="https://livy.website/js/menu.js"></script>
-  	<script src="https://livy.website/js/portfolio.js"></script>
-  	<script src="https://livy.website/js/footer.js"></script>
-  	<script src="https://livy.website/js/LivYScripts.js"></script>
-  	<script src="https://livy.website/js/LivYParticles.js"></script>
-	<script src="js/services.js">
-	</script>
+  	<script src="js/menu.js"></script>
+  	<script src="js/portfolio.js"></script>
+  	<script src="js/footer.js"></script>
+  	<script src="js/LivYScripts.js"></script>
+  	<script src="js/LivYParticles.js"></script>
+  	<script src="js/LivYScroll.js"></script>
+	<script src="js/services.js"></script>
 </body>
 
 </html>
