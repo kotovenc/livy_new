@@ -2,17 +2,41 @@ $('#order1').click(function(){
     $(".form1").animate({left: '0'},700);
 });
 
-$('#close1').click(function(){
-    $(".form1").animate({left: '-100%'},700);
+$(function() {
+  $("#close1").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      if(direction == 'left') {
+      	$(".form1").animate({left: '-100%'},700)
+      }   
+    }
+  });
 });
+
+//$('#close1').click(function(){
+  //  $(".form1").animate({left: '-100%'},700);
+//});
 
 $('#order2').click(function(){
     $(".form2").animate({right: '0'},700);
 });
 
-$('#close2').click(function(){
-    $(".form2").animate({right: '-100%'},700);
+$(function() {
+  $("#close2").swipe( {
+    //Generic swipe handler for all directions
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      if(direction == 'right'){
+      	$(".form2").animate({right: '-100%'},700)
+      }   
+    }
+  });
 });
+
+//$('#close2').click(function(){
+  //  $(".form2").animate({right: '-100%'},700);
+//});
+
+
 
 $("#phone").mask("+9(999) 999-99-99");
 
