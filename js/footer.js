@@ -3,7 +3,7 @@ $('#order1').click(function(){
 });
 
 $(function() {
-  $(".form1").swipe( {
+  $(".form1_bg, .form1_container").swipe( {
     //Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       if(direction == 'left') {
@@ -22,7 +22,7 @@ $('#order2').click(function(){
 });
 
 $(function() {
-  $(".form2").swipe( {
+  $(".form2_bg, .form2_container").swipe( {
     //Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       if(direction == 'right'){

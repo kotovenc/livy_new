@@ -1334,7 +1334,7 @@ grid-row-end: 8;
 	}
 
 	.form2_container{
-		margin: 0 20px;
+		margin: 60px 20px;
 		grid-column-start: 2;
 	  	grid-column-end: 5;
 	  	grid-row-start: 5;
