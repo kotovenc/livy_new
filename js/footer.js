@@ -3,7 +3,7 @@ $('#order1').click(function(){
 });
 
 $(function() {
-  $("#close1").swipe( {
+  $(".form1").swipe( {
     //Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       if(direction == 'left') {
@@ -13,16 +13,16 @@ $(function() {
   });
 });
 
-//$('#close1').click(function(){
-  //  $(".form1").animate({left: '-100%'},700);
-//});
+$('#close1').click(function(){
+  $(".form1").animate({left: '-100%'},700);
+});
 
 $('#order2').click(function(){
     $(".form2").animate({right: '0'},700);
 });
 
 $(function() {
-  $("#close2").swipe( {
+  $(".form2").swipe( {
     //Generic swipe handler for all directions
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
       if(direction == 'right'){
@@ -32,9 +32,9 @@ $(function() {
   });
 });
 
-//$('#close2').click(function(){
-  //  $(".form2").animate({right: '-100%'},700);
-//});
+$('#close2').click(function(){
+  $(".form2").animate({right: '-100%'},700);
+});
 
 
 
