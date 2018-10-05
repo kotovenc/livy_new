@@ -309,7 +309,7 @@ button{
 	margin-bottom: -5px;
 	width: 100%;
 	background-position: right;
-	background-image: url(img/spikes_dark.png);
+	//background-image: url(img/spikes_dark.png);
 }
 
 .testimonials{
