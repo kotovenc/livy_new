@@ -7,12 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="icon" href="img/icon32.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width">
+
+	<script src="js/jquery.maskedinput.min.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 					<li class="nav-itm2"><a href="#about">О нас</a></li>
 					<li class="nav-itm3"><a href="#services">Услуги</a></li>
 					<li class="nav-itm4"><a href="#portfolio">Портфолио</a></li>
-					<li class="nav-itm5"><a href="#testimonials">Отзывы</a></li>
+					<!--li class="nav-itm5"><a href="#testimonials">Отзывы</a></li-->
 					<li class="nav-itm6"><a href="#order">Заказать</a></li>
 					<li class="nav-itm7"><a href="#footer">Контакты</a></li>
 				</strong></ul>
@@ -42,7 +43,7 @@
 			<button class="nav_button" onclick="location.href='#about'"><div class="button_child">О нас</div></button>
 			<button class="nav_button" onclick="location.href='#services'"><div class="button_child">Услуги</div></button>
 			<button class="nav_button" onclick="location.href='#portfolio'"><div class="button_child">Портфолио</div></button>
-			<button class="nav_button" onclick="location.href='#testimonials'"><div class="button_child">Отзывы</div></button>
+			<!--button class="nav_button" onclick="location.href='#testimonials'"><div class="button_child">Отзывы</div></button-->
 			<button class="nav_button" onclick="location.href='#order'"><div class="button_child">Заказать</div></button>
 			<button class="nav_button" onclick="location.href='#footer'"><div class="button_child">Контакты</div></button>
 		</div>
@@ -51,13 +52,14 @@
 	<div class="grid block main">
 		<div class="item contact_us">
 			<p>Свяжитесь с нами:</p>
-			<p>8 (800) <b>555-35-35</b></p>
+			<p>8 (968) <b>825-68-10</b></p>
 		</div>
 		<div class="item main_text">
 			<h1>ВЕБ-СТУДИЯ LIVY</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			<p>Профессиональные услуги веб-разработки 
+                по выгодным ценам и с удобными для вас сроками. </p>
 			<br>
-			<p>Sed tempor gravida ante eu pellentesque.</p> 
+			<!--p>Sed tempor gravida ante eu pellentesque.</p--> 
 		</div>
 		<button class="item order_btn" onclick="location.href='#order'"><div class="button_child">ЗАКАЗАТЬ САЙТ</div></button>
 		<button class="item more" onclick="location.href='#about'"><div><p>Подробнее</p><img src="img/more.png"></div></button>
@@ -68,9 +70,12 @@
 	<a id="about"></a>
 	<div class="grid block about">
 	<div class="item about_head"><h1>о нас</h1></div>
-	<div class="item about_text"><p>Мы - молодая команда веб-разработчиков. Мы поставили себе цель делать сайты качественно и  быстро, и с каждым днём мы стремимся достигнуть ее. У вас есть идея для сайта мечты? - скажите нам, и мы его сделаем. Мы всё реализуем так, чтобы вы остались довольны. Или же у вас есть сайт, но он требует доработок? Не беда, мы доведём ваш сайт до ума и, в случае каких-то пожеланий, исполним их по первому слову.</p></div>
+	<div class="item about_text"><p>Мы - профессиональная команда веб-разработчиков 
+        Мы поставили себе цель делать сайты качественно и быстро и пришли к ней за 
+        очень короткое время 
+        </p></div>
 	<div class="item about_under">
-		<p>The fat cat sat on the mat bat away with paws eat and than sleep on your face so taco cat backwards spells taco cat but scream at teh bath litter kitter kitty litty little kitten big roar roar feed me, terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry.</p>
+		<!--p>The fat cat sat on the mat bat away with paws eat and than sleep on your face so taco cat backwards spells taco cat but scream at teh bath litter kitter kitty litty little kitten big roar roar feed me, terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry.</p-->
 	</div>
 	<div class="item about_slider">
 		<div class="slider" id="i1" withGrab="1">
@@ -115,6 +120,13 @@
 							<p>Артем</p>
 						</div>
 					</div>
+					<div class="slider_block">
+						<div class="in1slide">
+							<img class="pic" src="img/face6.png">
+							<p>Игорь</p>
+							<p>Верстка</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -128,45 +140,66 @@
 		</div>
 	</div>
 	<div class="item about_cat"><img src="img/cat_no_bg.png"></div>
-	<div class="cat_bg">
-		<div></div>
-	</div>
-
+	<div class="cat_bg"></div>
+	<div class="cat_bg_down"></div>
+	
 	</div>
 	<a id="services"></a>
 	<div class="grid block services">
 		<div class="item services_head"><h1>услуги</h1></div>
-		<div class="services1">
-			<div class="services_img"><img alt="n" src="img/tz.png"></div>
-			<p><b>Техническое задание</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+		
+		<div class="services1" id = "serv1">
+			<div class="line" id="line1"> </div>
+			
+			<div class="services_img" >
+				<img  alt="tz" src="img/tz.png">
+			</div>
+			
+			<div><p><b>Техническое задание</b></p>
+			<p>Мы обсудим детали вашего заказа 
+                и составим ТЗ на основе вашего заказа. </p></div>
 		</div>
 		
-		<div class="services2">
-			<div><img alt="n" src="img/design.png"></div>
-			<p><b>Создание дизайна</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+		<div class="services2" id = "serv2">
+			<div class="services_img"><img alt="design" src="img/design.png">
+				<div class="line" id="line2"> </div>
+			</div>
+			<div><p><b>Создание дизайна</b></p>
+			<p>Наши лучшие дизайнеры будут работать над оформлением вашего сайта 
+                в соответствии с последними трендами.</p></div>
+			
 		</div>
 			
-		<div class="services3">
-			<div><img alt="n" src="img/index.png"></div>
+		<div class="services3" id = "serv3">
+			<div class="services_img"><img alt="index" src="img/index.png">
+			<div class="line" id="line3"> </div>
+			</div>
 			<p><b>Разработка</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			<p>Наша сплочённая команда сверстает 
+                сайт с использованием современных технологий.</p>
 		</div>
 			
-		<div class="services4">
-			<div><img alt="n" src="img/site.png"></div>
+		<div class="services4" id = "serv4">
+			<div class="services_img"><img alt="site" src="img/site.png">
+				<div class="line" id="line4"> </div>
+			</div>
 			<p><b>Запуск сайта</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			<p>Мы поможем вам запустить сайт на выбранной платформе 
+                и настроить его должным образом.</p>
 		</div>
 		
-		<div class="services5">
-			<div><img alt="n" src="img/5.png"></div>
+		<div class="services5" id = "serv5">
+			<div class="services_img"><img alt="n" src="img/5.png">
+			</div>
 			<p><b>Поддержка сайта</b></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
+			<p>Наши специалисты из отдела поддержки будут готовы оказать свои услуги.</p>
 		</div>
+		<div class="services_cat1"><img src="img/cat_serv1.png" alt=""></div>
+		<div class="services_cat2"><img src="img/cat_serv2.png" alt=""></div>
 		<div id="s_triangles"></div>
 	</div>
+	
+	
 	<a id="portfolio"></a>
 	<div class="grid block portfolio">
 		<h1>ПОРТФОЛИО</h1>
@@ -175,11 +208,7 @@
 			<div class="portfolio_hidden">
 				<h2>Club 13</h2>
 				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
-				<br>
-				<p>Sed tempor gravida ante eu pellentesque. Nullam consequat iaculis ipsum et tincidunt.</p>
-				<br>
-				<p>Nullam ornare finibus felis, rutrum consectetur nulla malesuada a.</p>
+				<p>Наш первый реальный проект :)</p>
 				<a class="portf_site_link" href="#">Перейти на сайт</a>
 				<br>
 				<a class="portf_case_link" href="#">Посмотреть кейс</a>
@@ -190,11 +219,7 @@
 			<div class="portfolio_hidden">
 				<h2>Club 13</h2>
 				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras placerat tortor ac dolor scelerisque, ut faucibus ante porta.</p>
-				<br>
-				<p>Sed tempor gravida ante eu pellentesque. Nullam consequat iaculis ipsum et tincidunt.</p>
-				<br>
-				<p>Nullam ornare finibus felis, rutrum consectetur nulla malesuada a.</p>
+				<p>Тут тоже скоро что-нибудь будет. Возможно даже ваш заказ!</p>
 				<a class="portf_site_link" href="#">Перейти на сайт</a>
 				<br>
 				<a class="portf_case_link" href="#">Посмотреть кейс</a>
@@ -203,7 +228,7 @@
 		<a class="more_portfolio" href="#">Посмотреть все работы</a>
 		<div id="p_triangles"></div>
 	</div>
-	<a id="testimonials"></a>
+	<!--a id="testimonials"></a>
 	<div class="grid block testimonials">
 		<h1 class="testimonials_h"> ОТЗЫВЫ </h1>
 		<div class="TSLider">
@@ -216,7 +241,7 @@
 								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
 								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
 								<p>Иннокентий Бочкин, 27 лет</p>
-								<p>Писатель гей-фанфиков</p>
+								<p>Писатель фанфиков</p>
 							</div>
 						</div>
 	
@@ -226,7 +251,7 @@
 								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
 								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
 								<p>Иннокентий Бочкин, 27 лет</p>
-								<p>Писатель гей-фанфиков</p>
+								<p>Писатель фанфиков</p>
 							</div>
 						</div>
 	
@@ -236,7 +261,7 @@
 								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
 								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
 								<p>Иннокентий Бочкин, 27 лет</p>
-								<p>Писатель гей-фанфиков</p>
+								<p>Писатель фанфиков</p>
 							</div>
 						</div>
 
@@ -246,7 +271,7 @@
 								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
 								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
 								<p>Иннокентий Бочкин, 27 лет</p>
-								<p>Писатель гей-фанфиков</p>
+								<p>Писатель фанфиков</p>
 							</div>
 						</div>
 	
@@ -256,7 +281,7 @@
 								<p>Лорем ипсум долор сит амет, цонсецтетур адиписцинг елит. Црас плацерат тортор ац долор сцелерисqуе, ут фауцибус анте порта. Сед темпор гравида анте еу пеллентесqуе.</p>
 								<p>Нуллам цонсеqуат иацулис ипсум ет тинцидунт. Нуллам орнаре финибус фелис, рутрум цонсецтетур нулла малесуада а. Интегер малесуада, еним qуис малесуада ултрициес, сапиен неqуе сцелерискуе турпис, витае лациниа магна лецтус вел дуи.</p>
 								<p>Иннокентий Бочкин, 27 лет</p>
-								<p>Писатель гей-фанфиков</p>
+								<p>Писатель фанфиков</p>
 							</div>
 						</div>
 					</div>
@@ -271,7 +296,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 	<a id="order"></a>
 	<a id="footer"></a>
 	<div class="grid block order">
@@ -285,7 +310,7 @@
 			<a href="https://t.me/kotovenc" target="_blank"><img src="img/tg.png"></a>
 			<a href="https://vk.com/livy_web" target="_blank"><img src="img/vk.png"></a>
 			<a href="mailto:galina.malygina00@gmail.com" target="_blank"><img src="img/mail.png"></a>
-			<p>8 (800) <b>555-35-35</b></p>
+			<p>8 (968) <b>825-68-10</b></p>
 		</div>
 		
 	</div>
@@ -295,23 +320,24 @@
 		<div class="form1_container">
 			<form action="backend/form1.php" method="POST" class="form_grid submit">
 				<div class="name_input">
-					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<input class="form_input" id="name1" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="email_input">
-					<input class="form_input" type="email" name="mail" placeholder="Ваша почта" autocomplete="off">
+					<input class="form_input" id="email" type="email" name="email" placeholder="Ваша почта" autocomplete="off">
 					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="form1_select">
 					<select name="type">
 						<option value="Landing page">Landing page</option>
-						<option value="Landing page">Ellen Page</option>
-						<option value="Landing page">David Cage</option>
+						<option value="Fisnish site">Доработка сайта</option>
+						<option value="Design">Создание дизайна сайта</option>
+						<option value="Many page site">Многостраничный сайт</option>
 					</select>
 					<div class="icon_class"><div class="fas fa-angle-down" aria-hidden="true"></div></div>
 				</div>
-				<input type="text" name="text" placeholder="Текст" autocomplete="off">
-				<input type="submit" name="submit" class="order_button" value="ОСТАВИТЬ ЗАЯВКУ">
+				<textarea type="texta" name="text" placeholder="Текст" autocomplete="off"></textarea>
+				<input type="submit" name="submit" class="order_button" id="submit1" value="ОСТАВИТЬ ЗАЯВКУ">
 			</form>
 		</div>
 		<div class="close_bar" id="close1">
@@ -325,14 +351,14 @@
 		<div class="form2_container">
 			<form action="backend/form1.php" method="POST" class="form_grid submit2">
 				<div class="name_input">
-					<input class="form_input" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
+					<input class="form_input" id="name2" type="name" name="name" placeholder="Ваше имя" autocomplete="off">
 					<div class="icon_class"><div class="fa fa-user fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
 				</div>
 				<div class="email_input">
-					<input class="form_input" type="phone" name="phone" placeholder="Ваш номер" autocomplete="off">
-					<div class="icon_class"><div class="fas fa-envelope fa-lg fa-fw form_icon" aria-hidden="true"></div></div>
+					<input class="form_input" id="phone" type="phone" name="phone" placeholder="Ваш номер" autocomplete="off">
+					<div class="icon_class"><div class="fas fa-phone form_icon" aria-hidden="true"></div></div>
 				</div>
-				<input type="submit" name="submit" class="order_button" value="ЗАКАЗАТЬ ЗВОНОК">
+				<input type="submit" name="submit" class="order_button" id="submit2" value="ЗАКАЗАТЬ ЗВОНОК">
 			</form>
 		</div>
 		<div class="close_bar" id="close2">
@@ -364,20 +390,13 @@
 		<div class="column"></div>
 		<div class="column"></div>
 	</div-->
-	 <script src="js/jquery.parallax.js"></script>
-	  <script>
-  jQuery(document).ready(function(){
-    jQuery('#parallax .parallax-layer')
-    .parallax({
-      mouseport: jQuery('#parallax')
-    });
-  });
-  </script>
   	<script src="js/menu.js"></script>
   	<script src="js/portfolio.js"></script>
   	<script src="js/footer.js"></script>
   	<script src="js/LivYScripts.js"></script>
   	<script src="js/LivYParticles.js"></script>
+  	<script src="js/LivYScroll.js"></script>
+	<script src="js/services.js"></script>
 </body>
 
 </html>
